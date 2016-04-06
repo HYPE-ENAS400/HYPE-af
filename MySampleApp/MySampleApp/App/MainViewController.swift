@@ -18,7 +18,8 @@ class MainViewController: UIViewController, ImageStoreDelegate {
     
     var kolodaView: KolodaView!
     var imageStore: ImageStore!
-
+    
+    //Create subview for kolodaView, add Koloda view, and pass protocols
     override func viewDidLoad() {
         super.viewDidLoad()
         let viewRect = CGRectMake(24,90,270, 300)
@@ -41,12 +42,14 @@ class MainViewController: UIViewController, ImageStoreDelegate {
 
 }
 
+// KolodaView protocol that determines what cards to show
 extension MainViewController: KolodaViewDataSource{
     func koloda(kolodaNumberOfCards koloda:KolodaView) -> UInt {
         let test = UInt(imageStore.getNumAvailCards())
         return test
     }
     
+    //Return a new view (card) to show from ImageStore
     func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
         if let image = imageStore.getContentImageAtCardIndex(Int(index)) {
             let newView = UIImageView(image: image)
@@ -62,6 +65,7 @@ extension MainViewController: KolodaViewDataSource{
         
 }
 
+// Own implemenation upon swiping so can clear image cache of given card
 extension MainViewController: KolodaViewDelegate {
     func koloda(koloda: KolodaView, didSwipedCardAtIndex index: UInt, inDirection direction: SwipeResultDirection) {
         imageStore.clearCacheAtCardIndex(Int(index))

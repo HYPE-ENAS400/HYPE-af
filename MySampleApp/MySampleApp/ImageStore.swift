@@ -58,6 +58,7 @@ class ImageStore {
 //        downloadContentsIndices.removeAtIndex(index)
     }
     
+    //load available items from database, when all are loaded begin downloading them
     private func loadMoreContents() {
         manager.listAvailableContentsWithPrefix(prefix, marker: marker, completionHandler: {[weak self](contents: [AWSContent]?, nextMarker: String?, error: NSError?) -> Void in
             guard let strongSelf = self else { return }
@@ -76,6 +77,7 @@ class ImageStore {
             })
     }
     
+    //run through available items from database and download them all
     private func downloadCards(){
         if let downloadContents = contents {
             for (index, content) in downloadContents.enumerate(){
@@ -85,6 +87,7 @@ class ImageStore {
         
     }
     
+    //download a given item, reload the cards each time a new item is downloaded
     private func downloadContent(content: AWSContent, pinOnCompletion: Bool, index: Int) {
         content.downloadWithDownloadType( .IfNewerExists, pinOnCompletion: pinOnCompletion, progressBlock: {(content: AWSContent?, progress: NSProgress?) -> Void in
             // Handle progress feedback
@@ -101,6 +104,7 @@ class ImageStore {
     
 }
 
+//Delegate protocol so that can alter cards once downloaded
 protocol ImageStoreDelegate {
     func reloadData()
     func resetCurrentCardNumber()
