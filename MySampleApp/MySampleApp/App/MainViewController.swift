@@ -19,6 +19,8 @@ class MainViewController: UIViewController, ImageStoreDelegate {
     var kolodaView: KolodaView!
     var imageStore: ImageStore!
     
+    var userUID: String!
+    
     //Create subview for kolodaView, add Koloda view, and pass protocols
     override func viewDidLoad() {
         super.viewDidLoad()

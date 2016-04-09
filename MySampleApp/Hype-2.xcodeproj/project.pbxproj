@@ -26,6 +26,12 @@
 		6B0F0A311CB4C4DB009B2D0D /* DraggableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0F0A2E1CB4C4DB009B2D0D /* DraggableCardView.swift */; };
 		6B0F0A321CB4C4DB009B2D0D /* KolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0F0A2F1CB4C4DB009B2D0D /* KolodaView.swift */; };
 		6B0F0A331CB4C4DB009B2D0D /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0F0A301CB4C4DB009B2D0D /* OverlayView.swift */; };
+		6B69559A1CB834CE00797D04 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6955991CB834CE00797D04 /* Firebase.framework */; };
+		6B69559C1CB8356100797D04 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B69559B1CB8356100797D04 /* CFNetwork.framework */; };
+		6B69559E1CB8357500797D04 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B69559D1CB8357500797D04 /* libc++.tbd */; };
+		6B6955A01CB8358500797D04 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B69559F1CB8358500797D04 /* libicucore.tbd */; };
+		6B6955A41CB8A0A600797D04 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6955991CB834CE00797D04 /* Firebase.framework */; };
+		6B6955A51CB8A0A600797D04 /* Firebase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6955991CB834CE00797D04 /* Firebase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6BAC46BA1CB8189A00B93F4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC46B91CB8189A00B93F4B /* LoginViewController.swift */; };
 		6BCB928D1BAF889F00475B9E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCB928C1BAF889F00475B9E /* CoreMotion.framework */; };
 		6BCB92911BAF88D600475B9E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCB92901BAF88D600475B9E /* CoreLocation.framework */; };
@@ -53,6 +59,7 @@
 				17FCEC8C1C993A67006EA44F /* (null) in Embed Frameworks */,
 				17FCEC881C993A67006EA44F /* AWSS3.framework in Embed Frameworks */,
 				17FCEC8A1C993A67006EA44F /* (null) in Embed Frameworks */,
+				6B6955A51CB8A0A600797D04 /* Firebase.framework in Embed Frameworks */,
 				17FCEC821C993A67006EA44F /* AWSCore.framework in Embed Frameworks */,
 				17FCEC861C993A67006EA44F /* (null) in Embed Frameworks */,
 				17FCEC841C993A67006EA44F /* (null) in Embed Frameworks */,
@@ -79,6 +86,11 @@
 		6B0F0A2F1CB4C4DB009B2D0D /* KolodaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KolodaView.swift; sourceTree = "<group>"; };
 		6B0F0A301CB4C4DB009B2D0D /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		6B443C491B5DB06200406B17 /* Hype-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hype-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B6955991CB834CE00797D04 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		6B69559B1CB8356100797D04 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		6B69559D1CB8357500797D04 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		6B69559F1CB8358500797D04 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		6B6955A11CB8359A00797D04 /* Hype-2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hype-2-Bridging-Header.h"; sourceTree = "<group>"; };
 		6BAC46B91CB8189A00B93F4B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6BCB928C1BAF889F00475B9E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		6BCB92901BAF88D600475B9E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -102,6 +114,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B6955A01CB8358500797D04 /* libicucore.tbd in Frameworks */,
+				6B69559E1CB8357500797D04 /* libc++.tbd in Frameworks */,
+				6B69559C1CB8356100797D04 /* CFNetwork.framework in Frameworks */,
 				17FCEC681C977287006EA44F /* libsqlite3.tbd in Frameworks */,
 				17FCEC661C97727F006EA44F /* libz.tbd in Frameworks */,
 				17FCEC871C993A67006EA44F /* AWSS3.framework in Frameworks */,
@@ -109,12 +124,14 @@
 				CE7D92131BEB3764002F8AE0 /* SystemConfiguration.framework in Frameworks */,
 				6BFF25831B5E3617002364F9 /* Foundation.framework in Frameworks */,
 				6BFF25911B5E366C002364F9 /* UIKit.framework in Frameworks */,
+				6B6955A41CB8A0A600797D04 /* Firebase.framework in Frameworks */,
 				6BCB92931BAF896700475B9E /* AddressBook.framework in Frameworks */,
 				6BCB92911BAF88D600475B9E /* CoreLocation.framework in Frameworks */,
 				6BCB928D1BAF889F00475B9E /* CoreMotion.framework in Frameworks */,
 				6BFF258F1B5E3655002364F9 /* Security.framework in Frameworks */,
 				6BFF258D1B5E364D002364F9 /* MediaPlayer.framework in Frameworks */,
 				6BFF25811B5E360F002364F9 /* AssetsLibrary.framework in Frameworks */,
+				6B69559A1CB834CE00797D04 /* Firebase.framework in Frameworks */,
 				17FCEC811C993A67006EA44F /* AWSCore.framework in Frameworks */,
 				17FCEC741C993975006EA44F /* AWSMobileHubHelper.framework in Frameworks */,
 				E99730FDC5A00E3FEA3A3C38 /* Pods.framework in Frameworks */,
@@ -182,6 +199,7 @@
 				6B0F0A2C1CB4B0B6009B2D0D /* ImageStore.swift */,
 				CE790C451C2894CC000CA0DE /* Images.xcassets */,
 				6B443C4C1B5DB06200406B17 /* Supporting Files */,
+				6B6955A11CB8359A00797D04 /* Hype-2-Bridging-Header.h */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -225,6 +243,10 @@
 		6B443C891B5DD94700406B17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B69559F1CB8358500797D04 /* libicucore.tbd */,
+				6B69559D1CB8357500797D04 /* libc++.tbd */,
+				6B69559B1CB8356100797D04 /* CFNetwork.framework */,
+				6B6955991CB834CE00797D04 /* Firebase.framework */,
 				17FCEC751C993A01006EA44F /* AWSCore.framework */,
 				17FCEC781C993A01006EA44F /* AWSS3.framework */,
 				17FCEC671C977287006EA44F /* libsqlite3.tbd */,
@@ -508,6 +530,7 @@
 				PRODUCT_NAME = "Hype-2";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "MySampleApp/Hype-2-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -538,6 +561,7 @@
 				PRODUCT_NAME = "Hype-2";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "MySampleApp/Hype-2-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
