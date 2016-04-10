@@ -21,11 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Initialize ImageStore and start downloading data, pass to root VC
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        let viewController = window!.rootViewController as! MainViewController
-        let imageStore = ImageStore(delegate: viewController)
-        viewController.imageStore = imageStore
-        
-        return AWSMobileClient.sharedInstance.didFinishLaunching(application, withOptions: launchOptions)
+//        let viewController = window!.rootViewController as! MainViewController
+//        let imageStore = ImageStore(delegate: viewController)
+//        viewController.imageStore = imageStore
+//        
+//        return AWSMobileClient.sharedInstance.didFinishLaunching(application, withOptions: launchOptions)
+        return true
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
