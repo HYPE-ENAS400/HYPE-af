@@ -84,8 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Hype-2/Firebase.framework"
   install_framework "Pods-Hype-2/pop.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Hype-2/Firebase.framework"
   install_framework "Pods-Hype-2/pop.framework"
 fi
