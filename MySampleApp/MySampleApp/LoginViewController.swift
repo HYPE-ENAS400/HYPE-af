@@ -31,7 +31,7 @@ class LoginViewController: UIViewController{
                 print(error)
             } else {
                 self.userUID = authData.uid
-                print("Successfully created user account with uid: \(self.userUID)")
+                print("Successfully logged in user account with uid: \(self.userUID)")
                 self.performSegueWithIdentifier("onLoggedInSegue", sender: nil)
             }
         })
