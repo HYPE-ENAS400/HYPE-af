@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -33,27 +34,33 @@
                                     <constraint firstAttribute="width" constant="290" id="gAD-SE-2DC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcw-50-Kc9">
                                 <rect key="frame" x="273" y="306" width="55" height="30"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpClicked:" destination="PVt-c2-hmz" eventType="touchUpInside" id="GkE-xK-7Bh"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL1-rn-7Nj">
                                 <rect key="frame" x="155" y="94" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVk-yI-xjt">
                                 <rect key="frame" x="155" y="165" width="74" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4CN-ng-C6C">
                                 <rect key="frame" x="279" y="256" width="42" height="30"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="logInClicked:" destination="PVt-c2-hmz" eventType="touchUpInside" id="ClA-uo-yD5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -78,11 +85,12 @@
                         <outlet property="passwordTextEdit" destination="cgv-ed-nAv" id="Rq0-QO-zDr"/>
                         <outlet property="signUpButton" destination="Dcw-50-Kc9" id="fif-8Q-2Iv"/>
                         <outlet property="userNameTextEdit" destination="GB7-ov-Mnt" id="wFK-62-Slo"/>
+                        <segue destination="Tpj-br-M0x" kind="showDetail" identifier="onLoggedInSegue" action="showViewController:sender:" id="esM-2W-o7B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0A-Jc-tHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="936" y="671"/>
+            <point key="canvasLocation" x="930" y="491"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="r22-BW-ybZ">
@@ -95,8 +103,23 @@
                     <view key="view" contentMode="scaleToFill" id="wYP-Bo-ebo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjP-tM-2XZ">
+                                <rect key="frame" x="518" y="40" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VjP-tM-2XZ" firstAttribute="top" secondItem="Kpm-jj-RWw" secondAttribute="bottom" constant="20" id="gpW-8y-skI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VjP-tM-2XZ" secondAttribute="trailing" constant="20" id="xhs-KW-aqx"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentCountLabel" destination="VjP-tM-2XZ" id="xnT-oz-FwW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udZ-Po-GWV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

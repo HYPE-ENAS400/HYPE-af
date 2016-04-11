@@ -13,11 +13,24 @@
 
 import UIKit
 import AWSMobileHubHelper
+import Firebase
 
 class MainViewController: UIViewController, ImageStoreDelegate {
     
+    let ADSPERCONTENT = 2
+    
     var kolodaView: KolodaView!
     var imageStore: ImageStore!
+    
+    @IBOutlet var contentCountLabel: UILabel!
+    
+    //TODO change this
+    var adCount: Int = 0
+    var contentCount: Int = 0
+    
+    var userUID: String!
+    
+    var userFBRef: Firebase!
     
     //Create subview for kolodaView, add Koloda view, and pass protocols
     override func viewDidLoad() {
@@ -27,9 +40,36 @@ class MainViewController: UIViewController, ImageStoreDelegate {
         kolodaView.dataSource = self
         kolodaView.delegate = self
         self.view.addSubview(kolodaView)
+        
         self.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         
+        let tempRef = Firebase(url: "https://enas400hype.firebaseio.com/")
+        userFBRef = tempRef.childByAppendingPath("users").childByAppendingPath(userUID)
+        
+        userFBRef.observeEventType(.Value, withBlock: { (snapshot) in
+            let data = snapshot.value["contentCount"] as? Int
+            if let t = data{
+                self.contentCount = t
+                self.contentCountLabel.text = "\(self.contentCount)"
+            }
+            //add error handler?
+
+        })
+        
+        
     }
+    
+    
+    func checkAdCount(){
+        if(adCount % ADSPERCONTENT) == 0 {
+            contentCount++
+            let store = ["contentCount" : contentCount]
+            userFBRef.setValue(store)
+            adCount = 0
+            
+        }
+    }
+    
     
     func reloadData(){
         kolodaView.reloadData()
@@ -69,6 +109,8 @@ extension MainViewController: KolodaViewDataSource{
 extension MainViewController: KolodaViewDelegate {
     func koloda(koloda: KolodaView, didSwipedCardAtIndex index: UInt, inDirection direction: SwipeResultDirection) {
         imageStore.clearCacheAtCardIndex(Int(index))
+        adCount++
+        checkAdCount()
     }
 }
 

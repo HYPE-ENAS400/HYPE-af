@@ -1,0 +1,135 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/DerivedData/Hype-2/Build/Products/Debug-iphoneos/Pods.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-Swift.h",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/DerivedData/Hype-2/Build/Products/Debug-iphoneos/Pods.framework/Headers/Pods-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods-umbrella.h",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/Pods/Target Support Files/Pods/Pods-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/DerivedData/Hype-2/Build/Products/Debug-iphoneos/Pods.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/DerivedData/Hype-2/Build/Intermediates/Pods.build/Debug-iphoneos/Pods.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/DerivedData/Hype-2/Build/Products/Debug-iphoneos/pop.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "POP.h",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/Pods/pop/pop/POP.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPAnimatableProperty.h",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/Pods/pop/pop/POPAnimatableProperty.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPAnimation.h",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/Pods/pop/pop/POPAnimation.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPAnimationEvent.h",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/Pods/pop/pop/POPAnimationEvent.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPAnimationExtras.h",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/Pods/pop/pop/POPAnimationExtras.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPAnimationTracer.h",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/Pods/pop/pop/POPAnimationTracer.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPAnimator.h",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/Pods/pop/pop/POPAnimator.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPBasicAnimation.h",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/Pods/pop/pop/POPBasicAnimation.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPCustomAnimation.h",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/Pods/pop/pop/POPCustomAnimation.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPDecayAnimation.h",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/Pods/pop/pop/POPDecayAnimation.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPDefines.h",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/Pods/pop/pop/POPDefines.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPGeometry.h",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/Pods/pop/pop/POPGeometry.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPLayerExtras.h",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/Pods/pop/pop/POPLayerExtras.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPPropertyAnimation.h",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/Pods/pop/pop/POPPropertyAnimation.h"
+        },
+        {
+          'type': 'file',
+          'name': "POPSpringAnimation.h",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/Pods/pop/pop/POPSpringAnimation.h"
+        },
+        {
+          'type': 'file',
+          'name': "pop-Swift.h",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/DerivedData/Hype-2/Build/Products/Debug-iphoneos/pop.framework/Headers/pop-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "pop-umbrella.h",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/Pods/Target Support Files/pop/pop-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/DerivedData/Hype-2/Build/Products/Debug-iphoneos/pop.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/Max v1/iOSProjects/HYPE-af/MySampleApp/DerivedData/Hype-2/Build/Intermediates/Pods.build/Debug-iphoneos/pop.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}
