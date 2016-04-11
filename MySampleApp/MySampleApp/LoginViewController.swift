@@ -32,7 +32,7 @@ class LoginViewController: UIViewController{
             } else {
                 self.userUID = authData.uid
                 print("Successfully created user account with uid: \(self.userUID)")
-                self.performSegueWithIdentifier("onLogInSegue", sender: nil)
+                self.performSegueWithIdentifier("onLoggedInSegue", sender: nil)
             }
         })
     
@@ -53,9 +53,12 @@ class LoginViewController: UIViewController{
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "onLogInSegue" {
+        if segue.identifier == "onLoggedInSegue" {
             let mainViewController = segue.destinationViewController as! MainViewController
+            let imageStore = ImageStore(delegate: mainViewController)
+            mainViewController.imageStore = imageStore
             mainViewController.userUID = userUID
+            
         }
     }
     

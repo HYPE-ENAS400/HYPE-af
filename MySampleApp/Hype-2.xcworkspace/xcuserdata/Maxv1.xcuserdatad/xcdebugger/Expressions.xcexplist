@@ -18,6 +18,12 @@
          contextName = "DataSource.((loadMoreContents in _38E4AED2CBBA7409B935985DE578BF39)(DataSource) -&gt; () -&gt; ()).(closure #1):DataSource.swift">
       </ContextState>
       <ContextState
+         contextName = "MainViewController.(viewDidLoad(MainViewController) -&gt; () -&gt; ()).(closure #1):MainViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "-[FLeafNode val]:FLeafNode.m">
+      </ContextState>
+      <ContextState
          contextName = "DataSource.koloda(kolodaNumberOfCards : KolodaView) -&gt; UInt:DataSource.swift">
       </ContextState>
       <ContextState
