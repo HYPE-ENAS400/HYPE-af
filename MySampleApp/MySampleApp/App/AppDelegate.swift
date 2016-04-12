@@ -12,6 +12,7 @@
 //
 
 import UIKit
+import Batch
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // Initialize ImageStore and start downloading data, pass to root VC
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
+        Batch.startWithAPIKey("DEV570BD07814AB0002DE2261E8E60")
+        BatchPush.registerForRemoteNotifications()
         return true
     }
     
