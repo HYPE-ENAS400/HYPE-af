@@ -47,7 +47,7 @@ class LoginViewController: UIViewController{
                 //fix the optional?
                 self.userUID = (result["uid"] as? String)!
                 print("Successfully created user account with uid: \(self.userUID)")
-                self.performSegueWithIdentifier("onLogInSegue", sender: nil)
+                self.performSegueWithIdentifier("onLoggedInSegue", sender: nil)
             }
         })
     }

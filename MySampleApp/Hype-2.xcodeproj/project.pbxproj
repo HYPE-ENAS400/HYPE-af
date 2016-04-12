@@ -30,8 +30,9 @@
 		6B69559C1CB8356100797D04 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B69559B1CB8356100797D04 /* CFNetwork.framework */; };
 		6B69559E1CB8357500797D04 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B69559D1CB8357500797D04 /* libc++.tbd */; };
 		6B6955A01CB8358500797D04 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B69559F1CB8358500797D04 /* libicucore.tbd */; };
-		6B6955A41CB8A0A600797D04 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6955991CB834CE00797D04 /* Firebase.framework */; };
 		6B6955A51CB8A0A600797D04 /* Firebase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6955991CB834CE00797D04 /* Firebase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6B8382A21CBC1914003524D0 /* Batch.embeddedframework in Resources */ = {isa = PBXBuildFile; fileRef = 6B8382A11CBC1914003524D0 /* Batch.embeddedframework */; };
+		6B8382A41CBC192C003524D0 /* Batch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8382A31CBC192C003524D0 /* Batch.framework */; };
 		6BAC46BA1CB8189A00B93F4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC46B91CB8189A00B93F4B /* LoginViewController.swift */; };
 		6BCB928D1BAF889F00475B9E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCB928C1BAF889F00475B9E /* CoreMotion.framework */; };
 		6BCB92911BAF88D600475B9E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCB92901BAF88D600475B9E /* CoreLocation.framework */; };
@@ -91,6 +92,8 @@
 		6B69559D1CB8357500797D04 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		6B69559F1CB8358500797D04 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		6B6955A11CB8359A00797D04 /* Hype-2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hype-2-Bridging-Header.h"; sourceTree = "<group>"; };
+		6B8382A11CBC1914003524D0 /* Batch.embeddedframework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Batch.embeddedframework; sourceTree = "<group>"; };
+		6B8382A31CBC192C003524D0 /* Batch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Batch.framework; path = Batch.embeddedframework/Batch.framework; sourceTree = "<group>"; };
 		6BAC46B91CB8189A00B93F4B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6BCB928C1BAF889F00475B9E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		6BCB92901BAF88D600475B9E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -114,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B8382A41CBC192C003524D0 /* Batch.framework in Frameworks */,
 				6B6955A01CB8358500797D04 /* libicucore.tbd in Frameworks */,
 				6B69559E1CB8357500797D04 /* libc++.tbd in Frameworks */,
 				6B69559C1CB8356100797D04 /* CFNetwork.framework in Frameworks */,
@@ -124,7 +128,6 @@
 				CE7D92131BEB3764002F8AE0 /* SystemConfiguration.framework in Frameworks */,
 				6BFF25831B5E3617002364F9 /* Foundation.framework in Frameworks */,
 				6BFF25911B5E366C002364F9 /* UIKit.framework in Frameworks */,
-				6B6955A41CB8A0A600797D04 /* Firebase.framework in Frameworks */,
 				6BCB92931BAF896700475B9E /* AddressBook.framework in Frameworks */,
 				6BCB92911BAF88D600475B9E /* CoreLocation.framework in Frameworks */,
 				6BCB928D1BAF889F00475B9E /* CoreMotion.framework in Frameworks */,
@@ -243,8 +246,10 @@
 		6B443C891B5DD94700406B17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B8382A31CBC192C003524D0 /* Batch.framework */,
 				6B69559F1CB8358500797D04 /* libicucore.tbd */,
 				6B69559D1CB8357500797D04 /* libc++.tbd */,
+				6B8382A11CBC1914003524D0 /* Batch.embeddedframework */,
 				6B69559B1CB8356100797D04 /* CFNetwork.framework */,
 				6B6955991CB834CE00797D04 /* Firebase.framework */,
 				17FCEC751C993A01006EA44F /* AWSCore.framework */,
@@ -333,6 +338,7 @@
 				CED33FE51BB49B3D00B357CE /* Launch Screen.storyboard in Resources */,
 				CE790C3E1C2894A9000CA0DE /* Main.storyboard in Resources */,
 				CE790C461C2894CC000CA0DE /* Images.xcassets in Resources */,
+				6B8382A21CBC1914003524D0 /* Batch.embeddedframework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +466,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
+				PROVISIONING_PROFILE = "8168a90a-87cf-4bff-b873-5cc14971daa1";
 				SDKROOT = iphoneos;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -499,6 +506,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
+				PROVISIONING_PROFILE = "8168a90a-87cf-4bff-b873-5cc14971daa1";
 				SDKROOT = iphoneos;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -521,12 +529,20 @@
 					"$(PROJECT_DIR)/MySampleApp/Sdk/**",
 					"$(PROJECT_DIR)/MySampleApp/AmazonAws",
 					"$(PROJECT_DIR)/MySampleApp/Sdk/Aws",
+					"$(PROJECT_DIR)/Batch.embeddedframework",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/MySampleApp/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amazon.$(PRODUCT_NAME:rfc1034identifier)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"pop\"",
+					"-force_load",
+					"\"$(SRCROOT)/Batch.embeddedframework/Batch.framework/Batch\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.amazon.Hype2;
 				PRODUCT_NAME = "Hype-2";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
@@ -552,12 +568,20 @@
 					"$(PROJECT_DIR)/MySampleApp/Sdk/**",
 					"$(PROJECT_DIR)/MySampleApp/AmazonAws",
 					"$(PROJECT_DIR)/MySampleApp/Sdk/Aws",
+					"$(PROJECT_DIR)/Batch.embeddedframework",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/MySampleApp/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amazon.$(PRODUCT_NAME:rfc1034identifier)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"pop\"",
+					"-force_load",
+					"\"$(SRCROOT)/Batch.embeddedframework/Batch.framework/Batch\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.amazon.Hype2;
 				PRODUCT_NAME = "Hype-2";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
