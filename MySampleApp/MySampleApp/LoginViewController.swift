@@ -15,6 +15,7 @@ class LoginViewController: UIViewController{
     @IBOutlet var passwordTextEdit: UITextField!
     @IBOutlet var signUpButton: UIButton!
     @IBOutlet var logInButton: UIButton!
+    @IBOutlet var errorLabel: UILabel!
 
     var userUID: String!
     
@@ -28,7 +29,20 @@ class LoginViewController: UIViewController{
     @IBAction func logInClicked(sender: AnyObject){
         firebaseRef.authUser(userNameTextEdit.text, password: passwordTextEdit.text, withCompletionBlock: { (error, authData) -> Void in
             if error != nil{
-                print(error)
+                if let errorCode = FAuthenticationError(rawValue: error.code){
+                    self.errorLabel.hidden = false
+                    switch (errorCode) {
+                    case .UserDoesNotExist:
+                        self.errorLabel.text = "Sorry, we could not find this user"
+                    case .InvalidEmail:
+                        self.errorLabel.text = "Please enter a valid e-mail"
+                    case .InvalidPassword:
+                        self.errorLabel.text = "Password does not match user account"
+                    default:
+                        self.errorLabel.text = "Sorry, we could not log you in"
+                    }
+                }
+                
             } else {
                 self.userUID = authData.uid
                 print("Successfully logged in user account with uid: \(self.userUID)")
@@ -42,7 +56,19 @@ class LoginViewController: UIViewController{
         firebaseRef.createUser(userNameTextEdit.text, password: passwordTextEdit.text,
             withValueCompletionBlock: { (error, result) -> Void in
             if error != nil{
-                print(error)
+                if let errorCode = FAuthenticationError(rawValue: error.code){
+                    self.errorLabel.hidden = false
+                    switch (errorCode) {
+                    case .EmailTaken:
+                        self.errorLabel.text = "An account already exists with this e-mail"
+                    case .InvalidEmail:
+                        self.errorLabel.text = "Please enter a valid e-mail"
+                    case .InvalidPassword:
+                        self.errorLabel.text = "Password does not match user account"
+                    default:
+                        self.errorLabel.text = "Sorry, we could not sign you up"
+                    }
+                }
             } else {
                 //fix the optional?
                 self.userUID = (result["uid"] as? String)!

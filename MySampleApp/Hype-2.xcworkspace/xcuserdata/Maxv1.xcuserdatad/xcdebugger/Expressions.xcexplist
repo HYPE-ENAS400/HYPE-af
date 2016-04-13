@@ -6,10 +6,21 @@
          contextName = "ImageStore.deleteContentAtcardIndex(Int) -&gt; ():ImageStore.swift">
       </ContextState>
       <ContextState
+         contextName = "LoginViewController.(logInClicked(LoginViewController) -&gt; (AnyObject) -&gt; ()).(closure #1):LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "error.localizedDescription">
+            </PersistentString>
+            <PersistentString
+               value = "error.code">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "DataSource.(setNumberOfCards in _38E4AED2CBBA7409B935985DE578BF39)() -&gt; ():DataSource.swift">
       </ContextState>
       <ContextState
-         contextName = "DataSource.((downloadContent in _38E4AED2CBBA7409B935985DE578BF39)(DataSource) -&gt; (AWSContent, pinOnCompletion : Bool, index : Int) -&gt; ()).(closure #2):DataSource.swift">
+         contextName = "MainViewController.(viewDidLoad(MainViewController) -&gt; () -&gt; ()).(closure #1):MainViewController.swift">
       </ContextState>
       <ContextState
          contextName = "KolodaView.reloadData() -&gt; ():KolodaView.swift">
@@ -18,10 +29,10 @@
          contextName = "DataSource.((loadMoreContents in _38E4AED2CBBA7409B935985DE578BF39)(DataSource) -&gt; () -&gt; ()).(closure #1):DataSource.swift">
       </ContextState>
       <ContextState
-         contextName = "MainViewController.(viewDidLoad(MainViewController) -&gt; () -&gt; ()).(closure #1):MainViewController.swift">
+         contextName = "-[FLeafNode val]:FLeafNode.m">
       </ContextState>
       <ContextState
-         contextName = "-[FLeafNode val]:FLeafNode.m">
+         contextName = "DataSource.((downloadContent in _38E4AED2CBBA7409B935985DE578BF39)(DataSource) -&gt; (AWSContent, pinOnCompletion : Bool, index : Int) -&gt; ()).(closure #2):DataSource.swift">
       </ContextState>
       <ContextState
          contextName = "DataSource.koloda(kolodaNumberOfCards : KolodaView) -&gt; UInt:DataSource.swift">
