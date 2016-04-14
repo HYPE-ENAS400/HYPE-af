@@ -26,6 +26,10 @@
 		6B0F0A311CB4C4DB009B2D0D /* DraggableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0F0A2E1CB4C4DB009B2D0D /* DraggableCardView.swift */; };
 		6B0F0A321CB4C4DB009B2D0D /* KolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0F0A2F1CB4C4DB009B2D0D /* KolodaView.swift */; };
 		6B0F0A331CB4C4DB009B2D0D /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0F0A301CB4C4DB009B2D0D /* OverlayView.swift */; };
+		6B1088331CBF00A400314BA1 /* HypeNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1088321CBF00A400314BA1 /* HypeNavViewController.swift */; };
+		6B1088351CBF2FC500314BA1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1088341CBF2FC500314BA1 /* SettingsViewController.swift */; };
+		6B1088371CBF2FE900314BA1 /* Settings View.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1088361CBF2FE900314BA1 /* Settings View.storyboard */; };
+		6B10883A1CBF3AA000314BA1 /* Main Hype View.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1088391CBF3AA000314BA1 /* Main Hype View.storyboard */; };
 		6B69559A1CB834CE00797D04 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6955991CB834CE00797D04 /* Firebase.framework */; };
 		6B69559C1CB8356100797D04 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B69559B1CB8356100797D04 /* CFNetwork.framework */; };
 		6B69559E1CB8357500797D04 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B69559D1CB8357500797D04 /* libc++.tbd */; };
@@ -33,6 +37,8 @@
 		6B6955A51CB8A0A600797D04 /* Firebase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6955991CB834CE00797D04 /* Firebase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6B8382A21CBC1914003524D0 /* Batch.embeddedframework in Resources */ = {isa = PBXBuildFile; fileRef = 6B8382A11CBC1914003524D0 /* Batch.embeddedframework */; };
 		6B8382A41CBC192C003524D0 /* Batch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8382A31CBC192C003524D0 /* Batch.framework */; };
+		6B8382A61CBDD48D003524D0 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8382A51CBDD48D003524D0 /* KeychainWrapper.swift */; };
+		6B8382A81CBDDC0E003524D0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8382A71CBDDC0E003524D0 /* Constants.swift */; };
 		6BAC46BA1CB8189A00B93F4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC46B91CB8189A00B93F4B /* LoginViewController.swift */; };
 		6BCB928D1BAF889F00475B9E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCB928C1BAF889F00475B9E /* CoreMotion.framework */; };
 		6BCB92911BAF88D600475B9E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCB92901BAF88D600475B9E /* CoreLocation.framework */; };
@@ -86,6 +92,10 @@
 		6B0F0A2E1CB4C4DB009B2D0D /* DraggableCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableCardView.swift; sourceTree = "<group>"; };
 		6B0F0A2F1CB4C4DB009B2D0D /* KolodaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KolodaView.swift; sourceTree = "<group>"; };
 		6B0F0A301CB4C4DB009B2D0D /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		6B1088321CBF00A400314BA1 /* HypeNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HypeNavViewController.swift; sourceTree = "<group>"; };
+		6B1088341CBF2FC500314BA1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		6B1088361CBF2FE900314BA1 /* Settings View.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Settings View.storyboard"; sourceTree = "<group>"; };
+		6B1088391CBF3AA000314BA1 /* Main Hype View.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Main Hype View.storyboard"; sourceTree = "<group>"; };
 		6B443C491B5DB06200406B17 /* Hype-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hype-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B6955991CB834CE00797D04 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		6B69559B1CB8356100797D04 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -94,6 +104,8 @@
 		6B6955A11CB8359A00797D04 /* Hype-2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hype-2-Bridging-Header.h"; sourceTree = "<group>"; };
 		6B8382A11CBC1914003524D0 /* Batch.embeddedframework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Batch.embeddedframework; sourceTree = "<group>"; };
 		6B8382A31CBC192C003524D0 /* Batch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Batch.framework; path = Batch.embeddedframework/Batch.framework; sourceTree = "<group>"; };
+		6B8382A51CBDD48D003524D0 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		6B8382A71CBDDC0E003524D0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6BAC46B91CB8189A00B93F4B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6BCB928C1BAF889F00475B9E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		6BCB92901BAF88D600475B9E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -148,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				17A58F8C1C7D14A8005B5F6B /* UtilityFunctions.swift */,
+				6B8382A51CBDD48D003524D0 /* KeychainWrapper.swift */,
+				6B8382A71CBDDC0E003524D0 /* Constants.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -188,21 +202,32 @@
 			name = Koloda;
 			sourceTree = "<group>";
 		};
+		6B1088381CBF300F00314BA1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CED33FE41BB49B3D00B357CE /* Launch Screen.storyboard */,
+				CE790C3D1C2894A9000CA0DE /* Main.storyboard */,
+				6B1088361CBF2FE900314BA1 /* Settings View.storyboard */,
+				6B1088391CBF3AA000314BA1 /* Main Hype View.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		6B281C291B6A7FDA002FCF4F /* App */ = {
 			isa = PBXGroup;
 			children = (
-				6B0F0A211CB3773A009B2D0D /* Koloda */,
-				17A58F8B1C7D1491005B5F6B /* Utility */,
+				6B443C4C1B5DB06200406B17 /* Supporting Files */,
 				6B0502F41B8BD99500DA1F24 /* SignIn */,
-				CE790C3D1C2894A9000CA0DE /* Main.storyboard */,
+				17A58F8B1C7D1491005B5F6B /* Utility */,
+				6B0F0A211CB3773A009B2D0D /* Koloda */,
+				6B1088381CBF300F00314BA1 /* Storyboards */,
 				6BAC46B91CB8189A00B93F4B /* LoginViewController.swift */,
-				CED33FE41BB49B3D00B357CE /* Launch Screen.storyboard */,
+				6B1088341CBF2FC500314BA1 /* SettingsViewController.swift */,
 				1738CBC01C6E87A0009F8FA4 /* AppDelegate.swift */,
 				1738CBA01C6D7B0C009F8FA4 /* MainViewController.swift */,
 				6B0F0A2C1CB4B0B6009B2D0D /* ImageStore.swift */,
 				CE790C451C2894CC000CA0DE /* Images.xcassets */,
-				6B443C4C1B5DB06200406B17 /* Supporting Files */,
-				6B6955A11CB8359A00797D04 /* Hype-2-Bridging-Header.h */,
+				6B1088321CBF00A400314BA1 /* HypeNavViewController.swift */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -238,6 +263,7 @@
 		6B443C4C1B5DB06200406B17 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6B6955A11CB8359A00797D04 /* Hype-2-Bridging-Header.h */,
 				CE790C471C2894DE000CA0DE /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -338,6 +364,8 @@
 				CED33FE51BB49B3D00B357CE /* Launch Screen.storyboard in Resources */,
 				CE790C3E1C2894A9000CA0DE /* Main.storyboard in Resources */,
 				CE790C461C2894CC000CA0DE /* Images.xcassets in Resources */,
+				6B1088371CBF2FE900314BA1 /* Settings View.storyboard in Resources */,
+				6B10883A1CBF3AA000314BA1 /* Main Hype View.storyboard in Resources */,
 				6B8382A21CBC1914003524D0 /* Batch.embeddedframework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,14 +439,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BAC46BA1CB8189A00B93F4B /* LoginViewController.swift in Sources */,
+				6B8382A81CBDDC0E003524D0 /* Constants.swift in Sources */,
 				17FCEC6F1C989083006EA44F /* AWSMobileClient.swift in Sources */,
 				6B0F0A331CB4C4DB009B2D0D /* OverlayView.swift in Sources */,
 				1738CBC11C6E87A0009F8FA4 /* AppDelegate.swift in Sources */,
 				1738CBA11C6D7B0C009F8FA4 /* MainViewController.swift in Sources */,
 				6B0F0A2D1CB4B0B6009B2D0D /* ImageStore.swift in Sources */,
 				6B0F0A311CB4C4DB009B2D0D /* DraggableCardView.swift in Sources */,
+				6B1088331CBF00A400314BA1 /* HypeNavViewController.swift in Sources */,
 				6B0F0A321CB4C4DB009B2D0D /* KolodaView.swift in Sources */,
+				6B1088351CBF2FC500314BA1 /* SettingsViewController.swift in Sources */,
 				17A58F8D1C7D14A8005B5F6B /* UtilityFunctions.swift in Sources */,
+				6B8382A61CBDD48D003524D0 /* KeychainWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

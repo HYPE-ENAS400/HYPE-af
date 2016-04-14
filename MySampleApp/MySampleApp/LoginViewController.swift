@@ -18,6 +18,8 @@ class LoginViewController: UIViewController{
     @IBOutlet var errorLabel: UILabel!
 
     var userUID: String!
+    var userName: String!
+    var password: String!
     
     var firebaseRef: Firebase!
     
@@ -27,8 +29,19 @@ class LoginViewController: UIViewController{
     }
     
     @IBAction func logInClicked(sender: AnyObject){
+        
+        logInButton.userInteractionEnabled = false
+        signUpButton.userInteractionEnabled = false
+        
+        userName = userNameTextEdit.text
+        password = passwordTextEdit.text
+        
         firebaseRef.authUser(userNameTextEdit.text, password: passwordTextEdit.text, withCompletionBlock: { (error, authData) -> Void in
             if error != nil{
+                
+                self.logInButton.userInteractionEnabled = true
+                self.signUpButton.userInteractionEnabled = true
+                
                 if let errorCode = FAuthenticationError(rawValue: error.code){
                     self.errorLabel.hidden = false
                     switch (errorCode) {
@@ -44,18 +57,35 @@ class LoginViewController: UIViewController{
                 }
                 
             } else {
+                
+                let keychainWrapper = KeychainWrapper.standardKeychainAccess()
+                keychainWrapper.setString(self.userName, forKey: Constants.USERKEY)
+                keychainWrapper.setString(self.password, forKey: Constants.PASSKEY)
+                
                 self.userUID = authData.uid
                 print("Successfully logged in user account with uid: \(self.userUID)")
-                self.performSegueWithIdentifier("onLoggedInSegue", sender: nil)
+                self.performSegueWithIdentifier("unwindFromLogInSegue", sender: nil)
             }
         })
     
     }
     
     @IBAction func signUpClicked(sender: AnyObject){
-        firebaseRef.createUser(userNameTextEdit.text, password: passwordTextEdit.text,
+        //TODO Invalidate button
+        
+        logInButton.userInteractionEnabled = false
+        signUpButton.userInteractionEnabled = false
+        
+        userName = userNameTextEdit.text
+        password = passwordTextEdit.text
+        
+        firebaseRef.createUser(userName, password: password,
             withValueCompletionBlock: { (error, result) -> Void in
             if error != nil{
+                
+                self.logInButton.userInteractionEnabled = true
+                self.signUpButton.userInteractionEnabled = true
+                
                 if let errorCode = FAuthenticationError(rawValue: error.code){
                     self.errorLabel.hidden = false
                     switch (errorCode) {
@@ -70,22 +100,34 @@ class LoginViewController: UIViewController{
                     }
                 }
             } else {
-                //fix the optional?
+                //TODO fix the optional?
+                
+                let keychainWrapper = KeychainWrapper.standardKeychainAccess()
+                keychainWrapper.setString(self.userName, forKey: Constants.USERKEY)
+                keychainWrapper.setString(self.password, forKey: Constants.PASSKEY)
+
                 self.userUID = (result["uid"] as? String)!
                 print("Successfully created user account with uid: \(self.userUID)")
-                self.performSegueWithIdentifier("onLoggedInSegue", sender: nil)
+                self.performSegueWithIdentifier("unwindFromLogInSegue", sender: nil)
             }
         })
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "onLoggedInSegue" {
-            let mainViewController = segue.destinationViewController as! MainViewController
-            let imageStore = ImageStore(delegate: mainViewController)
-            mainViewController.imageStore = imageStore
-            mainViewController.userUID = userUID
-            
+//        if segue.identifier == "onLoggedInSegue" {
+//            let mainViewController = segue.destinationViewController as! MainViewController
+//            let imageStore = ImageStore(delegate: mainViewController)
+//            mainViewController.imageStore = imageStore
+//            mainViewController.userUID = userUID
+//            
+//        }
+        if segue.identifier == "unwindFromLogInSegue" {
+            let navViewController = segue.destinationViewController as! HypeNavViewController
+            navViewController.isLoggedIn = true
+            navViewController.userUID = userUID
+            navViewController.userName = userName
+            navViewController.password = password
         }
     }
-    
+//
 }

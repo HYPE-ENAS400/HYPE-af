@@ -24,6 +24,7 @@ class MainViewController: UIViewController, ImageStoreDelegate {
     
     @IBOutlet var contentCountLabel: UILabel!
     
+    
     //TODO change this
     var adCount: Int = 0
     var contentCount: Int = 0
@@ -59,6 +60,9 @@ class MainViewController: UIViewController, ImageStoreDelegate {
         
     }
     
+    func initImageStore(){
+        imageStore = ImageStore(delegate: self)
+    }
     
     func checkAdCount(){
         if(adCount % ADSPERCONTENT) == 0 {
@@ -69,6 +73,7 @@ class MainViewController: UIViewController, ImageStoreDelegate {
             
         }
     }
+    
     
     
     func reloadData(){

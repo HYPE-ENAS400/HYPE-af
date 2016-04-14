@@ -23,6 +23,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         Batch.startWithAPIKey("DEV570BD07814AB0002DE2261E8E60")
         BatchPush.registerForRemoteNotifications()
+        
+        let navViewController = window!.rootViewController as! HypeNavViewController
+        
+        var storyboard = UIStoryboard(name: "Settings View", bundle:nil)
+        let settingsViewController = storyboard.instantiateViewControllerWithIdentifier("settingsVC") as! SettingsViewController
+        settingsViewController.settingsDelegate = navViewController
+        navViewController.settingsViewController = settingsViewController
+        
+        storyboard = UIStoryboard(name: "Main Hype View", bundle:nil)
+        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("mainHypeView") as! MainViewController
+        
+        navViewController.mainViewController = mainViewController
+        
+        
+        let keychainWrapper = KeychainWrapper.standardKeychainAccess()
+        
+        
+        if let userName = keychainWrapper.stringForKey(Constants.USERKEY), password = keychainWrapper.stringForKey(Constants.PASSKEY){
+            navViewController.userName = userName
+            navViewController.password = password
+        }
+        
+        
+
+        
         return true
     }
     
