@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController{
+class LoginViewController: UIViewController, UITextFieldDelegate{
 
     @IBOutlet var userNameTextEdit: UITextField!
     @IBOutlet var passwordTextEdit: UITextField!
@@ -26,6 +26,16 @@ class LoginViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         firebaseRef = Firebase(url: "https://enas400hype.firebaseio.com/")
+    }
+    
+    @IBAction func dismissKeyboard(sender: AnyObject){
+        passwordTextEdit.resignFirstResponder()
+        userNameTextEdit.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     @IBAction func logInClicked(sender: AnyObject){

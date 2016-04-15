@@ -75,6 +75,7 @@ class HypeNavViewController: UIViewController, SettingsViewControllerDelegate {
     override func viewDidAppear(animated: Bool) {
         
         if !isLoggedIn{
+//            isLoggedIn = false
             tryLogin()
         }
     }

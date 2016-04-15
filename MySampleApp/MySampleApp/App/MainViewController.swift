@@ -23,9 +23,6 @@ class MainViewController: UIViewController, ImageStoreDelegate {
     
     var imageStore: ImageStore!
     
-//    @IBOutlet var contentCountLabel: UILabel!
-    
-    
     //TODO change this
     var adCount: Int = 0
     var contentCount: Int = 0
@@ -49,6 +46,9 @@ class MainViewController: UIViewController, ImageStoreDelegate {
         
         self.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         let tempRef = Firebase(url: "https://enas400hype.firebaseio.com/")
         userFBRef = tempRef.childByAppendingPath("users").childByAppendingPath(userUID)
         
@@ -59,10 +59,8 @@ class MainViewController: UIViewController, ImageStoreDelegate {
                 self.countLabel.text = "\(self.contentCount)"
             }
             //add error handler?
-
+            
         })
-        
-        
     }
     
     func initImageStore(){
@@ -73,13 +71,18 @@ class MainViewController: UIViewController, ImageStoreDelegate {
         progressBar.progress = Double(adCount)/Double(Constants.ADSPERCONTENT)
         if(adCount % Constants.ADSPERCONTENT) == 0 {
             contentCount++
-            let store = ["contentCount" : contentCount]
-            userFBRef.setValue(store)
+            userFBRef.childByAppendingPath("contentCount").setValue(contentCount)
             adCount = 0
             
         }
     }
     
+    @IBAction func onSwipeRightClicked(sender: AnyObject){
+        kolodaView.swipe(SwipeResultDirection.Right)
+    }
+    @IBAction func onSwipeLeftClicked(sender: AnyObject){
+        kolodaView.swipe(SwipeResultDirection.Left)
+    }
     
     func reloadData(){
         kolodaView.reloadData()
@@ -143,6 +146,12 @@ extension MainViewController: KolodaViewDelegate {
         imageStore.clearCacheAtCardIndex(Int(index))
         adCount++
         checkAdCount()
+        
+        if direction == .Right {
+            let newFBRef = userFBRef.childByAppendingPath("cardsLiked")
+            imageStore.pushImageURLAtCardIndex(Int(index), fbRef: newFBRef)
+//            imageStore.pushImageURLAtCardIndex(Int(index), fbRef: userFBRef)
+        }
     }
     func koloda(kolodaDidRunOutOfCards koloda: KolodaView) {
         //Example: reloading

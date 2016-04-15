@@ -52,6 +52,19 @@ class ImageStore {
         }
     }
     
+    func pushImageURLAtCardIndex(index: Int, fbRef: Firebase){
+        if let content = getContentAtCardIndex(index) {
+            content.getRemoteFileURLWithCompletionHandler({ (url, error) in
+                if let er = error {
+                    print(er)
+                }
+                if let u = url {
+                    fbRef.childByAutoId().setValue(String(u))
+                }
+            })
+        }
+    }
+    
     func clearCacheAtCardIndex(index: Int) {
         let contentIndex = downloadContentsIndices[index]
         contents?[contentIndex].removeLocal()
