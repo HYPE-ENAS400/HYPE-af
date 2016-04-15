@@ -40,6 +40,7 @@
 		6B8382A61CBDD48D003524D0 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8382A51CBDD48D003524D0 /* KeychainWrapper.swift */; };
 		6B8382A81CBDDC0E003524D0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8382A71CBDDC0E003524D0 /* Constants.swift */; };
 		6BAC46BA1CB8189A00B93F4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC46B91CB8189A00B93F4B /* LoginViewController.swift */; };
+		6BAFD19E1CC06F0F00FB8FBD /* KYCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAFD19D1CC06F0F00FB8FBD /* KYCircularProgress.swift */; };
 		6BCB928D1BAF889F00475B9E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCB928C1BAF889F00475B9E /* CoreMotion.framework */; };
 		6BCB92911BAF88D600475B9E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCB92901BAF88D600475B9E /* CoreLocation.framework */; };
 		6BCB92931BAF896700475B9E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCB92921BAF896700475B9E /* AddressBook.framework */; };
@@ -107,6 +108,7 @@
 		6B8382A51CBDD48D003524D0 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		6B8382A71CBDDC0E003524D0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6BAC46B91CB8189A00B93F4B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6BAFD19D1CC06F0F00FB8FBD /* KYCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCircularProgress.swift; sourceTree = "<group>"; };
 		6BCB928C1BAF889F00475B9E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		6BCB92901BAF88D600475B9E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6BCB92921BAF896700475B9E /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -159,6 +161,7 @@
 		17A58F8B1C7D1491005B5F6B /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				6BAFD19D1CC06F0F00FB8FBD /* KYCircularProgress.swift */,
 				17A58F8C1C7D14A8005B5F6B /* UtilityFunctions.swift */,
 				6B8382A51CBDD48D003524D0 /* KeychainWrapper.swift */,
 				6B8382A71CBDDC0E003524D0 /* Constants.swift */,
@@ -451,6 +454,7 @@
 				6B1088351CBF2FC500314BA1 /* SettingsViewController.swift in Sources */,
 				17A58F8D1C7D14A8005B5F6B /* UtilityFunctions.swift in Sources */,
 				6B8382A61CBDD48D003524D0 /* KeychainWrapper.swift in Sources */,
+				6BAFD19E1CC06F0F00FB8FBD /* KYCircularProgress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,7 +3,47 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "DraggableCardView.panGestureRecognized(UIPanGestureRecognizer) -&gt; ():DraggableCardView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dragDistance">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DraggableCardView.(dragDirection in _B4F5B57A147B7425D06F3E84726AAFA3).getter:DraggableCardView.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DataSource.((loadMoreContents in _38E4AED2CBBA7409B935985DE578BF39)(DataSource) -&gt; () -&gt; ()).(closure #1):DataSource.swift">
+      </ContextState>
+      <ContextState
          contextName = "ImageStore.deleteContentAtcardIndex(Int) -&gt; ():ImageStore.swift">
+      </ContextState>
+      <ContextState
+         contextName = "KolodaView.(setupDeck in _2B9478AD5264979AEFA18515C12A70B9)() -&gt; ():KolodaView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "countOfCards">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DataSource.koloda(kolodaNumberOfCards : KolodaView) -&gt; UInt:DataSource.swift">
+      </ContextState>
+      <ContextState
+         contextName = "MainViewController.(viewDidLoad(MainViewController) -&gt; () -&gt; ()).(closure #1):MainViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "-[FLeafNode val]:FLeafNode.m">
+      </ContextState>
+      <ContextState
+         contextName = "HypeNavViewController.userName.didset:HypeNavViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DataSource.((downloadContent in _38E4AED2CBBA7409B935985DE578BF39)(DataSource) -&gt; (AWSContent, pinOnCompletion : Bool, index : Int) -&gt; ()).(closure #2):DataSource.swift">
+      </ContextState>
+      <ContextState
+         contextName = "KolodaView.reloadData() -&gt; ():KolodaView.swift">
       </ContextState>
       <ContextState
          contextName = "LoginViewController.(logInClicked(LoginViewController) -&gt; (AnyObject) -&gt; ()).(closure #1):LoginViewController.swift">
@@ -18,32 +58,6 @@
       </ContextState>
       <ContextState
          contextName = "DataSource.(setNumberOfCards in _38E4AED2CBBA7409B935985DE578BF39)() -&gt; ():DataSource.swift">
-      </ContextState>
-      <ContextState
-         contextName = "MainViewController.(viewDidLoad(MainViewController) -&gt; () -&gt; ()).(closure #1):MainViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "KolodaView.reloadData() -&gt; ():KolodaView.swift">
-      </ContextState>
-      <ContextState
-         contextName = "DataSource.((loadMoreContents in _38E4AED2CBBA7409B935985DE578BF39)(DataSource) -&gt; () -&gt; ()).(closure #1):DataSource.swift">
-      </ContextState>
-      <ContextState
-         contextName = "-[FLeafNode val]:FLeafNode.m">
-      </ContextState>
-      <ContextState
-         contextName = "DataSource.((downloadContent in _38E4AED2CBBA7409B935985DE578BF39)(DataSource) -&gt; (AWSContent, pinOnCompletion : Bool, index : Int) -&gt; ()).(closure #2):DataSource.swift">
-      </ContextState>
-      <ContextState
-         contextName = "DataSource.koloda(kolodaNumberOfCards : KolodaView) -&gt; UInt:DataSource.swift">
-      </ContextState>
-      <ContextState
-         contextName = "KolodaView.(setupDeck in _2B9478AD5264979AEFA18515C12A70B9)() -&gt; ():KolodaView.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "countOfCards">
-            </PersistentString>
-         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

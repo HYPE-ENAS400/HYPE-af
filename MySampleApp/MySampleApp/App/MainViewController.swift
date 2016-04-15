@@ -17,12 +17,13 @@ import Firebase
 
 class MainViewController: UIViewController, ImageStoreDelegate {
     
-    let ADSPERCONTENT = 2
+    @IBOutlet var countLabel: UILabel!
+    @IBOutlet var progressBar: KYCircularProgress!
+    @IBOutlet var kolodaView: KolodaView!
     
-    var kolodaView: KolodaView!
     var imageStore: ImageStore!
     
-    @IBOutlet var contentCountLabel: UILabel!
+//    @IBOutlet var contentCountLabel: UILabel!
     
     
     //TODO change this
@@ -36,11 +37,15 @@ class MainViewController: UIViewController, ImageStoreDelegate {
     //Create subview for kolodaView, add Koloda view, and pass protocols
     override func viewDidLoad() {
         super.viewDidLoad()
-        let viewRect = CGRectMake(24,90,270, 300)
-        kolodaView = KolodaView(frame: viewRect)
+        
+        progressBar.lineWidth = 10.0
+        progressBar.guideLineWidth = 10.0
+        progressBar.progressGuideColor = UIColor(red: 212/255, green: 212/255, blue: 212/255, alpha: 1)
+        progressBar.showProgressGuide = true
+        progressBar.colors = [UIColor(red: 255/255, green: 56/255, blue: 73/255, alpha: 1)]
+        
         kolodaView.dataSource = self
         kolodaView.delegate = self
-        self.view.addSubview(kolodaView)
         
         self.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         
@@ -51,7 +56,7 @@ class MainViewController: UIViewController, ImageStoreDelegate {
             let data = snapshot.value["contentCount"] as? Int
             if let t = data{
                 self.contentCount = t
-                self.contentCountLabel.text = "\(self.contentCount)"
+                self.countLabel.text = "\(self.contentCount)"
             }
             //add error handler?
 
@@ -65,7 +70,8 @@ class MainViewController: UIViewController, ImageStoreDelegate {
     }
     
     func checkAdCount(){
-        if(adCount % ADSPERCONTENT) == 0 {
+        progressBar.progress = Double(adCount)/Double(Constants.ADSPERCONTENT)
+        if(adCount % Constants.ADSPERCONTENT) == 0 {
             contentCount++
             let store = ["contentCount" : contentCount]
             userFBRef.setValue(store)
@@ -73,7 +79,6 @@ class MainViewController: UIViewController, ImageStoreDelegate {
             
         }
     }
-    
     
     
     func reloadData(){
@@ -97,8 +102,30 @@ extension MainViewController: KolodaViewDataSource{
     //Return a new view (card) to show from ImageStore
     func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
         if let image = imageStore.getContentImageAtCardIndex(Int(index)) {
-            let newView = UIImageView(image: image)
-            return newView
+//            let newView = UIImageView(image: image)
+//            let newContainerView = UIView(frame: kolodaView.frameForCardAtIndex(0))
+            let superFrame = kolodaView.frameForCardAtIndex(0)
+            let newContainerView = UIView(frame: superFrame)
+            newContainerView.layer.cornerRadius = 20
+            
+            newContainerView.backgroundColor = UIColor.whiteColor()
+            newContainerView.layer.shadowOpacity = 0.7
+            newContainerView.layer.shadowOffset = CGSizeZero
+            newContainerView.layer.shadowRadius = 10
+            
+//            newContainerView.layer.borderColor = UIColor.blackColor().CGColor
+//            newContainerView.layer.borderWidth = 2.0
+            
+//            newContainerView.backgroundColor = UIColor.redColor()
+            
+            let childFrame = CGRectInset(superFrame, 7, 7)
+            let newChildView = UIImageView(frame: childFrame)
+            newChildView.image = image
+            newChildView.layer.masksToBounds = true
+            newChildView.layer.cornerRadius = 20
+            newContainerView.addSubview(newChildView)
+            
+            return newContainerView
         } else {
             let newView = UIView()
             let colorArray = [UIColor.blueColor(), UIColor.redColor(), UIColor.greenColor()]
@@ -116,6 +143,10 @@ extension MainViewController: KolodaViewDelegate {
         imageStore.clearCacheAtCardIndex(Int(index))
         adCount++
         checkAdCount()
+    }
+    func koloda(kolodaDidRunOutOfCards koloda: KolodaView) {
+        //Example: reloading
+        kolodaView.reloadData()
     }
 }
 

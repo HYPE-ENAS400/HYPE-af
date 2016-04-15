@@ -97,7 +97,10 @@ class ImageStore {
                     return
                 }
                 self.downloadContentsIndices.append(index)
-                self.delegate.reloadData()
+                if self.getNumAvailCards() == 1{
+                    self.delegate.reloadData()
+                }
+                
         })
     }
     

@@ -13,6 +13,7 @@ public enum SwipeResultDirection {
     case None
     case Left
     case Right
+    case Up
 }
 
 //Default values
@@ -178,6 +179,7 @@ public class KolodaView: UIView, DraggableCardDelegate {
                     let overlayView = overlayViewForCardAtIndex(UInt(index+currentCardNumber))
                     
                     nextCardView.configure(nextCardContentView, overlayView: overlayView)
+                    
                     visibleCards.append(nextCardView)
                     index == 0 ? addSubview(nextCardView) : insertSubview(nextCardView, belowSubview: visibleCards[index - 1])
                 }
@@ -192,6 +194,7 @@ public class KolodaView: UIView, DraggableCardDelegate {
                 if index == 0 {
                     card.frame = frameForTopCard()
                     card.layer.transform = CATransform3DIdentity
+                    
                 } else {
                     let cardParameters = backgroundCardParametersForFrame(frameForCardAtIndex(UInt(index)))
                     
@@ -216,7 +219,9 @@ public class KolodaView: UIView, DraggableCardDelegate {
         let multiplier: CGFloat = index > 0 ? 1.0 : 0.0
         let previousCardFrame = index > 0 ? frameForCardAtIndex(max(index - 1, 0)) : CGRectZero
         let yOffset = (CGRectGetHeight(previousCardFrame) - height + previousCardFrame.origin.y + backgroundCardsTopMargin) * multiplier
+
         let frame = CGRect(x: xOffset, y: yOffset, width: width, height: height)
+
         
         return frame
     }

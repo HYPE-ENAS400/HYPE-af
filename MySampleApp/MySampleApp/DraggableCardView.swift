@@ -43,6 +43,7 @@ public class DraggableCardView: UIView {
     private var dragBegin = false
     private var dragDistance = CGPointZero
     private var actionMargin: CGFloat = 0.0
+    private var actionMarginVertical: CGFloat = 0.0
     
     //MARK: Lifecycle
     init() {
@@ -62,7 +63,8 @@ public class DraggableCardView: UIView {
     
     override public var frame: CGRect {
         didSet {
-            actionMargin = delegate?.card(cardSwipeThresholdMargin: self) ?? frame.size.width / 2.0
+            actionMargin = frame.size.width / 2.0
+            actionMarginVertical = frame.size.height / 2.0
         }
     }
     
@@ -175,6 +177,7 @@ public class DraggableCardView: UIView {
                 constant: 0)
             
             addConstraints([width,height,top,leading])
+
         }
     }
     
@@ -234,6 +237,10 @@ public class DraggableCardView: UIView {
     
     //MARK: Private
     private var dragDirection: SwipeResultDirection {
+        //TODO CHANGE DEFINITION OF UPSWIPE
+        if dragDistance.y < -100 && abs(dragDistance.x) < 50{
+            return .Up
+        }
         return dragDistance.x > 0 ? .Right : .Left
     }
     
@@ -247,8 +254,8 @@ public class DraggableCardView: UIView {
     }
     
     private func swipeMadeAction() {
-        
-        if abs(dragDistance.x) >= actionMargin {
+        //TODO CHANGE ACTION MARGIN
+        if abs(dragDistance.x) >= actionMargin || dragDistance.y <= -actionMarginVertical  {
             swipeAction(dragDirection)
         } else {
             resetViewPositionAndTransformations()
@@ -257,22 +264,41 @@ public class DraggableCardView: UIView {
     
     private func swipeAction(direction: SwipeResultDirection) {
         
-        let screenWidth = CGRectGetWidth(UIScreen.mainScreen().bounds)
-        let translation = screenWidth + (screenWidth / 2)
-        let directionMultiplier: CGFloat = direction == .Left ? -1 : 1
-        let finishTranslation = directionMultiplier * translation
-        
-        overlayView?.overlayState = direction == .Left ? .Left : .Right
-        overlayView?.alpha = 1.0
-        delegate?.card(self, wasSwipedInDirection: direction)
-        let translationAnimation = POPBasicAnimation(propertyNamed: kPOPLayerTranslationX)
-        translationAnimation.duration = cardSwipeActionAnimationDuration
-        translationAnimation.fromValue = POPLayerGetTranslationX(layer)
-        translationAnimation.toValue = finishTranslation
-        translationAnimation.completionBlock = { _, _ in
-            self.removeFromSuperview()
+        if direction != .Up{
+            let screenWidth = CGRectGetWidth(UIScreen.mainScreen().bounds)
+            let translation = screenWidth + (screenWidth / 2)
+            let directionMultiplier: CGFloat = direction == .Left ? -1 : 1
+            let finishTranslation = directionMultiplier * translation
+            
+            overlayView?.overlayState = direction == .Left ? .Left : .Right
+            overlayView?.alpha = 1.0
+            delegate?.card(self, wasSwipedInDirection: direction)
+            let translationAnimation = POPBasicAnimation(propertyNamed: kPOPLayerTranslationX)
+            translationAnimation.duration = cardSwipeActionAnimationDuration
+            translationAnimation.fromValue = POPLayerGetTranslationX(layer)
+            translationAnimation.toValue = finishTranslation
+            translationAnimation.completionBlock = { _, _ in
+                self.removeFromSuperview()
+            }
+            layer.pop_addAnimation(translationAnimation, forKey: "swipeTranslationAnimation")
+        } else {
+            let screenHeight = CGRectGetHeight(UIScreen.mainScreen().bounds)
+            let translation = screenHeight + (screenHeight / 2)
+            let directionMultiplier: CGFloat = -1
+            let finishTranslation = directionMultiplier * translation
+            
+            overlayView?.overlayState = direction == .Left ? .Left : .Right
+            overlayView?.alpha = 1.0
+            delegate?.card(self, wasSwipedInDirection: direction)
+            let translationAnimation = POPBasicAnimation(propertyNamed: kPOPLayerTranslationY)
+            translationAnimation.duration = cardSwipeActionAnimationDuration
+            translationAnimation.fromValue = POPLayerGetTranslationY(layer)
+            translationAnimation.toValue = finishTranslation
+            translationAnimation.completionBlock = { _, _ in
+                self.removeFromSuperview()
+            }
+            layer.pop_addAnimation(translationAnimation, forKey: "swipeTranslationAnimation")
         }
-        layer.pop_addAnimation(translationAnimation, forKey: "swipeTranslationAnimation")
     }
     
     private func resetViewPositionAndTransformations() {

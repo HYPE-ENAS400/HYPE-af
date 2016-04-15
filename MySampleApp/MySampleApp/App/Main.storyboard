@@ -31,20 +31,18 @@
                                             <action selector="onHypeButtonClicked:" destination="i3f-Qq-Fhr" eventType="touchUpInside" id="4t4-0D-Dxl"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="982-Bu-p55">
-                                        <rect key="frame" x="377" y="23" width="32" height="30"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Grid">
+                                    <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="982-Bu-p55">
+                                        <rect key="frame" x="544" y="20" width="36" height="36"/>
+                                        <state key="normal" image="grid_button">
                                             <color key="titleColor" red="0.96078431369999995" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onGridButtonClicked:" destination="i3f-Qq-Fhr" eventType="touchUpInside" id="ZT6-8Z-d32"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfu-TZ-bkh">
-                                        <rect key="frame" x="162" y="23" width="62" height="30"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Settings">
+                                    <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfu-TZ-bkh">
+                                        <rect key="frame" x="20" y="20" width="36" height="36"/>
+                                        <state key="normal" image="settings_button">
                                             <color key="titleColor" red="0.96078431369999995" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -52,20 +50,22 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.86716482442368226" green="0.34913278426578948" blue="0.32130034988421052" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.2196078431372549" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="zkw-Ps-Kd4" firstAttribute="leading" secondItem="qfu-TZ-bkh" secondAttribute="trailing" constant="30" id="1Ip-4F-mNM"/>
+                                    <constraint firstAttribute="trailing" secondItem="982-Bu-p55" secondAttribute="trailing" constant="20" id="47e-O5-4Em"/>
                                     <constraint firstItem="982-Bu-p55" firstAttribute="centerY" secondItem="wRn-LC-op9" secondAttribute="centerY" id="7gR-YT-yac"/>
+                                    <constraint firstItem="982-Bu-p55" firstAttribute="centerY" secondItem="wRn-LC-op9" secondAttribute="centerY" id="BKx-0q-UH2"/>
+                                    <constraint firstItem="qfu-TZ-bkh" firstAttribute="centerY" secondItem="wRn-LC-op9" secondAttribute="centerY" id="KEa-YD-k2C"/>
                                     <constraint firstItem="zkw-Ps-Kd4" firstAttribute="centerY" secondItem="wRn-LC-op9" secondAttribute="centerY" id="MwR-Gm-IIG"/>
                                     <constraint firstAttribute="height" constant="75" id="UyA-OU-EIs"/>
+                                    <constraint firstItem="qfu-TZ-bkh" firstAttribute="leading" secondItem="wRn-LC-op9" secondAttribute="leading" constant="20" id="VlJ-du-7t7"/>
                                     <constraint firstItem="zkw-Ps-Kd4" firstAttribute="centerX" secondItem="wRn-LC-op9" secondAttribute="centerX" id="iWN-a4-75Z"/>
                                     <constraint firstItem="qfu-TZ-bkh" firstAttribute="centerY" secondItem="wRn-LC-op9" secondAttribute="centerY" id="lyQ-tb-V6A"/>
-                                    <constraint firstItem="982-Bu-p55" firstAttribute="leading" secondItem="zkw-Ps-Kd4" secondAttribute="trailing" constant="30" id="qBS-ur-S1f"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sli-oa-GaY">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
-                                <color key="backgroundColor" red="0.72243134469696968" green="0.29497860196823239" blue="0.27318382402692498" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.79494160353535359" green="0.18128979261824654" blue="0.23730974661002247" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Bcx-tp-t5R"/>
                                 </constraints>
@@ -170,7 +170,7 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUh-sz-SFM">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
-                                <color key="backgroundColor" red="0.72243134470000003" green="0.29497860199999998" blue="0.27318382400000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.79494160349999998" green="0.1812897926" blue="0.23730974660000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="wzP-Wa-9L8"/>
                                 </constraints>
@@ -215,4 +215,8 @@
             <point key="canvasLocation" x="1180" y="478"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="grid_button" width="36" height="36"/>
+        <image name="settings_button" width="36" height="36"/>
+    </resources>
 </document>
