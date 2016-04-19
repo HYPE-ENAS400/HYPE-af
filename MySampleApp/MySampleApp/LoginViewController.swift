@@ -73,6 +73,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                 keychainWrapper.setString(self.password, forKey: Constants.PASSKEY)
                 
                 self.userUID = authData.uid
+                
+                Firebase(url: "https://enas400hype.firebaseio.com/").childByAppendingPath("users").childByAppendingPath(self.userUID).childByAppendingPath("username").setValue(self.userName)
+                
                 print("Successfully logged in user account with uid: \(self.userUID)")
                 self.performSegueWithIdentifier("unwindFromLogInSegue", sender: nil)
             }
@@ -117,6 +120,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                 keychainWrapper.setString(self.password, forKey: Constants.PASSKEY)
 
                 self.userUID = (result["uid"] as? String)!
+                
+                Firebase(url: "https://enas400hype.firebaseio.com/").childByAppendingPath("users").childByAppendingPath(self.userUID).childByAppendingPath("username").setValue(self.userName)
+                
                 print("Successfully created user account with uid: \(self.userUID)")
                 self.performSegueWithIdentifier("unwindFromLogInSegue", sender: nil)
             }

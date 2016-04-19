@@ -31,7 +31,7 @@
                                             <action selector="onHypeButtonClicked:" destination="i3f-Qq-Fhr" eventType="touchUpInside" id="4t4-0D-Dxl"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="982-Bu-p55">
+                                    <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="982-Bu-p55">
                                         <rect key="frame" x="544" y="20" width="36" height="36"/>
                                         <state key="normal" image="grid_button">
                                             <color key="titleColor" red="0.96078431369999995" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -52,14 +52,13 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.2196078431372549" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="982-Bu-p55" secondAttribute="trailing" constant="20" id="47e-O5-4Em"/>
-                                    <constraint firstItem="982-Bu-p55" firstAttribute="centerY" secondItem="wRn-LC-op9" secondAttribute="centerY" id="7gR-YT-yac"/>
-                                    <constraint firstItem="982-Bu-p55" firstAttribute="centerY" secondItem="wRn-LC-op9" secondAttribute="centerY" id="BKx-0q-UH2"/>
+                                    <constraint firstAttribute="trailing" secondItem="982-Bu-p55" secondAttribute="trailing" constant="20" id="Glz-mj-v0W"/>
                                     <constraint firstItem="qfu-TZ-bkh" firstAttribute="centerY" secondItem="wRn-LC-op9" secondAttribute="centerY" id="KEa-YD-k2C"/>
                                     <constraint firstItem="zkw-Ps-Kd4" firstAttribute="centerY" secondItem="wRn-LC-op9" secondAttribute="centerY" id="MwR-Gm-IIG"/>
                                     <constraint firstAttribute="height" constant="75" id="UyA-OU-EIs"/>
                                     <constraint firstItem="qfu-TZ-bkh" firstAttribute="leading" secondItem="wRn-LC-op9" secondAttribute="leading" constant="20" id="VlJ-du-7t7"/>
                                     <constraint firstItem="zkw-Ps-Kd4" firstAttribute="centerX" secondItem="wRn-LC-op9" secondAttribute="centerX" id="iWN-a4-75Z"/>
+                                    <constraint firstItem="982-Bu-p55" firstAttribute="centerY" secondItem="wRn-LC-op9" secondAttribute="centerY" id="jGW-4S-Qht"/>
                                     <constraint firstItem="qfu-TZ-bkh" firstAttribute="centerY" secondItem="wRn-LC-op9" secondAttribute="centerY" id="lyQ-tb-V6A"/>
                                 </constraints>
                             </view>
@@ -124,7 +123,7 @@
                                     <constraint firstAttribute="height" constant="60" id="WsV-Fh-UDs"/>
                                 </constraints>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

@@ -73,11 +73,80 @@
                         <outlet property="countLabel" destination="cv5-kj-6I1" id="N0Z-ei-GAl"/>
                         <outlet property="kolodaView" destination="yzO-AQ-R2d" id="3yZ-Fx-Jig"/>
                         <outlet property="progressBar" destination="E5c-vD-C3L" id="VGW-46-hqD"/>
+                        <segue destination="Lu2-MX-9Ik" kind="presentation" identifier="showUsersTableViewSegue" id="7pt-74-a0b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcH-sB-AqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="168" y="235"/>
+        </scene>
+        <!--Users Table View Controller-->
+        <scene sceneID="Kpc-CL-SWv">
+            <objects>
+                <viewController id="Lu2-MX-9Ik" customClass="UsersTableViewController" customModule="Hype_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uEH-kJ-dKN"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aq3-Dj-0Yn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fgR-LI-ayo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uvf-Vr-B52">
+                                <rect key="frame" x="0.0" y="20" width="600" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" id="LX0-M3-uxL">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LX0-M3-uxL" id="sp6-XF-AmB">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jj9-DC-8xB">
+                                <rect key="frame" x="35" y="528" width="530" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.21960784310000001" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="h50-CN-b1X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="38"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onCancelButtonClicked:" destination="Lu2-MX-9Ik" eventType="touchUpInside" id="CNU-vS-gY8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="jj9-DC-8xB" secondAttribute="trailing" constant="15" id="4lb-4i-JdA"/>
+                            <constraint firstItem="Uvf-Vr-B52" firstAttribute="top" secondItem="uEH-kJ-dKN" secondAttribute="bottom" id="9TR-Bc-yGP"/>
+                            <constraint firstItem="jj9-DC-8xB" firstAttribute="leading" secondItem="fgR-LI-ayo" secondAttribute="leadingMargin" constant="15" id="L6r-Cs-Syi"/>
+                            <constraint firstItem="Aq3-Dj-0Yn" firstAttribute="top" secondItem="jj9-DC-8xB" secondAttribute="bottom" constant="15" id="TlP-fq-mFL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uvf-Vr-B52" secondAttribute="trailing" constant="-20" id="WTy-At-RE8"/>
+                            <constraint firstItem="Uvf-Vr-B52" firstAttribute="leading" secondItem="fgR-LI-ayo" secondAttribute="leadingMargin" constant="-20" id="jcA-h2-2Mf"/>
+                            <constraint firstItem="jj9-DC-8xB" firstAttribute="top" secondItem="Uvf-Vr-B52" secondAttribute="bottom" constant="5" id="qRz-ze-QZD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="jj9-DC-8xB" id="cFw-CU-y98"/>
+                        <outlet property="tableView" destination="Uvf-Vr-B52" id="Aec-4L-YRI"/>
+                        <segue destination="LNt-v3-9va" kind="unwind" identifier="unwindFromUsersSegue" unwindAction="unwindFromUsersSegue:" id="hVe-BQ-gpk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cDw-gY-jmL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="LNt-v3-9va" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="235"/>
         </scene>
     </scenes>
     <resources>

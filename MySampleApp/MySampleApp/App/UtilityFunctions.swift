@@ -14,6 +14,7 @@
 //
 
 import Foundation
+import UIKit
 
 func prettyPrintJson(object: AnyObject?) -> String {
     var prettyResult: String = ""
@@ -44,4 +45,15 @@ func prettyPrintJson(object: AnyObject?) -> String {
         prettyResult = "\"\(objectAsString)\""
     }
     return prettyResult
+}
+
+func resizeImage(image: UIImage, newScale: CGFloat) -> UIImage{
+    let newWidth = image.size.width * newScale
+    let newHeight = image.size.width * newScale
+    UIGraphicsBeginImageContext(CGSizeMake(newWidth, newHeight))
+    image.drawInRect(CGRectMake(0, 0, newWidth, newHeight))
+    let newImage = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    
+    return newImage
 }

@@ -121,93 +121,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MySampleApp/ImageStore.swift"
-            timestampString = "482385338.511561"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "clearCacheAtCardIndex(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MySampleApp/App/MainViewController.swift"
-            timestampString = "482386132.198711"
+            timestampString = "482771712.069302"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "MainViewController"
             landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MySampleApp/App/MainViewController.swift"
-            timestampString = "482386132.198711"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "MainViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Hype_2.MainViewController.koloda (Hype_2.MainViewController)(kolodaNumberOfCards : Hype_2.KolodaView) -&gt; Swift.UInt"
-                  moduleName = "Hype-2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/App/MainViewController.swift"
-                  timestampString = "481606913.534592"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "28">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "protocol witness for Hype_2.KolodaViewDataSource.koloda &lt;A where A: Hype_2.KolodaViewDataSource&gt; (A)(kolodaNumberOfCards : Hype_2.KolodaView) -&gt; Swift.UInt in conformance Hype_2.MainViewController : Hype_2.KolodaViewDataSource in Hype_2"
-                  moduleName = "Hype-2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/App/MainViewController.swift"
-                  timestampString = "481606913.534798"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "dynamic Hype_2.MainViewController.koloda (Hype_2.MainViewController)(kolodaNumberOfCards : Hype_2.KolodaView) -&gt; Swift.UInt"
-                  moduleName = "Hype-2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/App/MainViewController.swift"
-                  timestampString = "481606913.53495"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "0">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -264,22 +185,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MySampleApp/ImageStore.swift"
-            timestampString = "481607415.742616"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "getContentAtCardIndex(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MySampleApp/LoginViewController.swift"
             timestampString = "482381130.014853"
             startingColumnNumber = "9223372036854775807"
@@ -297,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MySampleApp/App/MainViewController.swift"
-            timestampString = "482386132.198711"
+            timestampString = "482771712.069302"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "onSwipeRightClicked(_:)"
             landmarkType = "5">
             <Locations>
@@ -408,11 +313,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MySampleApp/LoginViewController.swift"
-            timestampString = "482381130.014853"
+            timestampString = "482731130.000787"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "signUpClicked(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -424,11 +329,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MySampleApp/LoginViewController.swift"
-            timestampString = "482381130.014853"
+            timestampString = "482731130.000787"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -440,11 +345,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MySampleApp/LoginViewController.swift"
-            timestampString = "482381130.014853"
+            timestampString = "482731130.000787"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "signUpClicked(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -456,11 +361,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MySampleApp/HypeNavViewController.swift"
-            timestampString = "482380183.338436"
+            timestampString = "482699561.506401"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "tryLogin()"
             landmarkType = "5">
          </BreakpointContent>
@@ -472,11 +377,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MySampleApp/App/AppDelegate.swift"
-            timestampString = "482293329.062176"
+            timestampString = "482712280.762096"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -495,6 +400,53 @@
             endingLineNumber = "17"
             landmarkName = "HypeNavViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc Hype_2.HypeNavViewController.userName.setter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "Hype-2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/HypeNavViewController.swift"
+                  timestampString = "482773199.637261"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hype_2.HypeNavViewController.userName.setter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "Hype-2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/HypeNavViewController.swift"
+                  timestampString = "482773199.637536"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hype_2.HypeNavViewController.(userName.materializeForSet : Swift.Optional&lt;Swift.String&gt;).(closure #1)"
+                  moduleName = "Hype-2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/HypeNavViewController.swift"
+                  timestampString = "482773199.637747"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -776,11 +728,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MySampleApp/LoginViewController.swift"
-            timestampString = "482381858.168588"
+            timestampString = "482731130.000787"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -788,17 +740,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MySampleApp/LoginViewController.swift"
-            timestampString = "482381897.046257"
+            timestampString = "482731130.000787"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Owned To Guaranteed, Arg[1] = Dead and Owned To Guaranteed&gt; of Hype_2.LoginViewController.prepareForSegue (Hype_2.LoginViewController)(__ObjC.UIStoryboardSegue, sender : Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; ()"
+                  moduleName = "Hype-2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/LoginViewController.swift"
+                  timestampString = "482773328.161125"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "332">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Owned To Guaranteed, Arg[1] = Dead and Owned To Guaranteed&gt; of Hype_2.LoginViewController.prepareForSegue (Hype_2.LoginViewController)(__ObjC.UIStoryboardSegue, sender : Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; ()"
+                  moduleName = "Hype-2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/LoginViewController.swift"
+                  timestampString = "482773328.161303"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "580">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -824,12 +808,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MySampleApp/App/MainViewController.swift"
-            timestampString = "482386132.198711"
+            timestampString = "482771712.069302"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
-            landmarkName = "koloda(_:didSwipedCardAtIndex:inDirection:)"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "checkAdCount()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/App/AppDelegate.swift"
+            timestampString = "482712280.762096"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/App/AppDelegate.swift"
+            timestampString = "482712280.762096"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -840,42 +856,490 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MySampleApp/ImageStore.swift"
-            timestampString = "482384360.913527"
+            timestampString = "482771712.069302"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "pushImageURLAtCardIndex(_:fbRef:)"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "downloadContent(_:pinOnCompletion:index:)"
             landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Hype_2.ImageStore.pushImageURLAtCardIndex (Hype_2.ImageStore)(Swift.Int, fbRef : __ObjC.Firebase) -&gt; ()"
+                  symbolName = "Hype_2.ImageStore.downloadContentAtCardIndex (Hype_2.ImageStore)(Swift.Int) -&gt; ()"
                   moduleName = "Hype-2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/ImageStore.swift"
-                  timestampString = "482384360.919159"
+                  timestampString = "482720718.17413"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "80">
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "208">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Hype_2.ImageStore.(pushImageURLAtCardIndex (Hype_2.ImageStore) -&gt; (Swift.Int, fbRef : __ObjC.Firebase) -&gt; ()).(closure #1)"
+                  symbolName = "Hype_2.ImageStore.(downloadCards in _BF90D9CE06DC1620B8690291FF7B7A02) (Hype_2.ImageStore)() -&gt; ()"
                   moduleName = "Hype-2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/ImageStore.swift"
-                  timestampString = "482384360.919414"
+                  timestampString = "482720718.174626"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "316">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageStore.swift"
+            timestampString = "482771712.069302"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "clearCacheAtCardIndex(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageStore.swift"
+            timestampString = "482771712.069302"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "downloadContent(_:pinOnCompletion:index:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageStore.swift"
+            timestampString = "482771712.069302"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "downloadContent(_:pinOnCompletion:index:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageStore.swift"
+            timestampString = "482711469.805988"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "init(delegate:awsManager:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hype_2.ImageStore.init (Hype_2.ImageStore.Type)(delegate : Hype_2.ImageStoreDelegate) -&gt; Hype_2.ImageStore"
+                  moduleName = "Hype-2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/ImageStore.swift"
+                  timestampString = "482711753.622342"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hype_2.ImageStore.__allocating_init (Hype_2.ImageStore.Type)(delegate : Hype_2.ImageStoreDelegate) -&gt; Hype_2.ImageStore"
+                  moduleName = "Hype-2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/ImageStore.swift"
+                  timestampString = "482711753.622529"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/GridViewController.swift"
+            timestampString = "482726974.676453"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "initImageStore()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/GridViewController.swift"
+            timestampString = "482726974.676453"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "initImageStore()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/GridViewController.swift"
+            timestampString = "482726974.676453"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "initImageStore()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageStore.swift"
+            timestampString = "482736741.273357"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "downloadContentAtCardIndex(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageStore.swift"
+            timestampString = "482771712.069302"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "downloadContent(_:pinOnCompletion:index:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageStore.swift"
+            timestampString = "482773328.090863"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "downloadContent(_:pinOnCompletion:index:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageStore.swift"
+            timestampString = "482771712.069302"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "downloadContent(_:pinOnCompletion:index:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageGridCell.swift"
+            timestampString = "482717803.51083"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "updateWithImage(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageGridCell.swift"
+            timestampString = "482717803.51083"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "setRandomView()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageGridCell.swift"
+            timestampString = "482717803.51083"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "setRandomView()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hype_2.ImageGridCell.setRandomView (Hype_2.ImageGridCell)() -&gt; ()"
+                  moduleName = "Hype-2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/ImageGridCell.swift"
+                  timestampString = "482716546.086045"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hype_2.ImageGridCell.setRandomView (Hype_2.ImageGridCell)() -&gt; ()"
+                  moduleName = "Hype-2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/ImageGridCell.swift"
+                  timestampString = "482716546.086278"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "196">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageGridCell.swift"
+            timestampString = "482717803.51083"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "setRandomView()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageGridCell.swift"
+            timestampString = "482717803.51083"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "setRandomView()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageGridCell.swift"
+            timestampString = "482717803.51083"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "setRandomView()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageStore.swift"
+            timestampString = "482771712.069302"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "downloadContent(_:pinOnCompletion:index:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageStore.swift"
+            timestampString = "482771712.069302"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "loadMoreContents()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageStore.swift"
+            timestampString = "482771712.069302"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "downloadCards()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageStore.swift"
+            timestampString = "482736741.273357"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "pushImageKeyAtCardIndex(_:fbRef:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/GridViewController.swift"
+            timestampString = "482726974.676453"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hype_2.GridViewController.collectionView (Hype_2.GridViewController)(__ObjC.UICollectionView, numberOfItemsInSection : Swift.Int) -&gt; Swift.Int"
+                  moduleName = "Hype-2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/GridViewController.swift"
+                  timestampString = "482721525.664211"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc Hype_2.GridViewController.collectionView (Hype_2.GridViewController)(__ObjC.UICollectionView, numberOfItemsInSection : Swift.Int) -&gt; Swift.Int"
+                  moduleName = "Hype-2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/GridViewController.swift"
+                  timestampString = "482721525.664471"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
                   offsetFromSymbolStart = "24">
                </Location>
             </Locations>
@@ -887,13 +1351,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MySampleApp/ImageStore.swift"
-            timestampString = "482384593.903614"
+            filePath = "MySampleApp/GridViewController.swift"
+            timestampString = "482726900.268498"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "pushImageURLAtCardIndex(_:fbRef:)"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "collectionView(_:willDisplayCell:forItemAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -903,44 +1367,108 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MySampleApp/App/MainViewController.swift"
-            timestampString = "482386132.198711"
+            filePath = "MySampleApp/GridViewController.swift"
+            timestampString = "482726905.759607"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "koloda(_:didSwipedCardAtIndex:inDirection:)"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "collectionView(_:willDisplayCell:forItemAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/GridViewController.swift"
+            timestampString = "482727012.268856"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "newCardImageLoaded(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/UsersTableViewController.swift"
+            timestampString = "482738257.917048"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "tableView(_:didSelectRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/UsersTableViewController.swift"
+            timestampString = "482738257.917048"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/UsersTableViewController.swift"
+            timestampString = "482738342.757626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Hype_2.MainViewController.koloda (Hype_2.MainViewController)(Hype_2.KolodaView, didSwipedCardAtIndex : Swift.UInt, inDirection : Hype_2.SwipeResultDirection) -&gt; ()"
+                  symbolName = "Hype_2.UsersTableViewController.tableView (Hype_2.UsersTableViewController)(__ObjC.UITableView, numberOfRowsInSection : Swift.Int) -&gt; Swift.Int"
                   moduleName = "Hype-2"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/App/MainViewController.swift"
-                  timestampString = "482385170.796641"
+                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/UsersTableViewController.swift"
+                  timestampString = "482738353.882513"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "147"
-                  endingLineNumber = "147"
-                  offsetFromSymbolStart = "44">
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "20">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "protocol witness for Hype_2.KolodaViewDelegate.koloda &lt;A where A: Hype_2.KolodaViewDelegate&gt; (A)(Hype_2.KolodaView, didSwipedCardAtIndex : Swift.UInt, inDirection : Hype_2.SwipeResultDirection) -&gt; () in conformance Hype_2.MainViewController : Hype_2.KolodaViewDelegate in Hype_2"
+                  symbolName = "@objc Hype_2.UsersTableViewController.tableView (Hype_2.UsersTableViewController)(__ObjC.UITableView, numberOfRowsInSection : Swift.Int) -&gt; Swift.Int"
                   moduleName = "Hype-2"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/App/MainViewController.swift"
-                  timestampString = "482385170.796879"
+                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/UsersTableViewController.swift"
+                  timestampString = "482738353.88274"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "146"
-                  endingLineNumber = "146"
-                  offsetFromSymbolStart = "0">
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "24">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -951,13 +1479,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MySampleApp/App/MainViewController.swift"
-            timestampString = "482386132.198711"
+            filePath = "MySampleApp/UsersTableViewController.swift"
+            timestampString = "482738345.414108"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "koloda(_:didSwipedCardAtIndex:inDirection:)"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageStore.swift"
+            timestampString = "482773106.42877"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "addContentByKey(_:shouldDownload:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -967,13 +1511,109 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MySampleApp/App/MainViewController.swift"
-            timestampString = "482386132.198711"
+            filePath = "MySampleApp/ImageStore.swift"
+            timestampString = "482773108.056541"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "checkAdCount()"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "addContentByKey(_:shouldDownload:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/App/MainViewController.swift"
+            timestampString = "482773148.942138"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "koloda(_:viewForCardAtIndex:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Dead and Owned To Guaranteed&gt; of Hype_2.MainViewController.koloda (Hype_2.MainViewController)(Hype_2.KolodaView, viewForCardAtIndex : Swift.UInt) -&gt; __ObjC.UIView"
+                  moduleName = "Hype-2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/App/MainViewController.swift"
+                  timestampString = "482773328.190622"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Dead and Owned To Guaranteed&gt; of Hype_2.MainViewController.koloda (Hype_2.MainViewController)(Hype_2.KolodaView, viewForCardAtIndex : Swift.UInt) -&gt; __ObjC.UIView"
+                  moduleName = "Hype-2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max%20v1/iOSProjects/HYPE-af/MySampleApp/MySampleApp/App/MainViewController.swift"
+                  timestampString = "482773328.190924"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
+                  offsetFromSymbolStart = "364">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/App/MainViewController.swift"
+            timestampString = "482773153.179787"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "koloda(_:viewForCardAtIndex:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageStore.swift"
+            timestampString = "482773291.10533"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "downloadContent(_:pinOnCompletion:index:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/ImageStore.swift"
+            timestampString = "482773293.288087"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "downloadContent(_:pinOnCompletion:index:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

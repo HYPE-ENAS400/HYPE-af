@@ -21,11 +21,13 @@ class HypeNavViewController: UIViewController, SettingsViewControllerDelegate {
     var userUID: String!{
         didSet{
             mainViewController?.userUID = userUID
+            gridViewController?.userUID = userUID
         }
     }
     
     var mainViewController: MainViewController?
     var settingsViewController: SettingsViewController?
+    var gridViewController: GridViewController?
     
     @IBOutlet var hypeBarView: UIView!
     
@@ -36,6 +38,7 @@ class HypeNavViewController: UIViewController, SettingsViewControllerDelegate {
             if isLoggedIn == true {
                 hypeBarView.hidden = false
                 mainViewController?.initImageStore()
+                gridViewController?.initImageStore()
                 activeViewController = mainViewController
                 settingsButton.alpha = 0.7
                 hypeButton.alpha = 1
@@ -93,7 +96,7 @@ class HypeNavViewController: UIViewController, SettingsViewControllerDelegate {
         gridButton.alpha = 0.7
     }
     @IBAction func onGridButtonClicked(sender: AnyObject){
-//        activeViewController = gridViewController
+        activeViewController = gridViewController
         settingsButton.alpha = 0.7
         hypeButton.alpha = 0.7
         gridButton.alpha = 1

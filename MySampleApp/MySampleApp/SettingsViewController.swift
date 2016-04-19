@@ -14,7 +14,7 @@ class SettingsViewController: UIViewController{
     var userName: String?
     var settingsDelegate: SettingsViewControllerDelegate!
     
-    override func viewDidLoad() {
+    override func viewDidAppear(animated: Bool) {
         userNameLabel.text = userName
     }
     

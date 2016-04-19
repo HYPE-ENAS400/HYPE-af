@@ -11,10 +11,7 @@ import MediaPlayer
 import AWSMobileHubHelper
 
 class ImageStore {
-
-        
-    private var downloadContentsIndices: [Int]
-        
+    
     private var contents: [AWSContent]?
     private var prefix: String!
     private var marker: String?
@@ -23,52 +20,73 @@ class ImageStore {
     
     private var manager: AWSContentManager!
     
-    init(delegate: ImageStoreDelegate) {
+    init(delegate: ImageStoreDelegate, awsManager: AWSContentManager) {
         self.delegate = delegate
-        downloadContentsIndices = [Int]()
-        manager = AWSContentManager.defaultContentManager()
+        manager = awsManager
+    }
+    
+    func initializeCardsFromAWS(){
         didLoadAllContents = false
         loadMoreContents()
     }
     
-    func getNumAvailCards() -> Int {
-        return downloadContentsIndices.count
+    func getNumAvailCards() -> Int{
+        if let c = contents{
+            return c.count
+        } else {
+            return 0
+        }
     }
     
-    func getContentAtCardIndex(index: Int) -> AWSContent? {
+    func getContentAtIndex(index: Int) -> AWSContent? {
         if let currentContents = contents {
-            let contentIndex = downloadContentsIndices[Int(index)]
-            return currentContents[contentIndex]
+            return currentContents[index]
+        } else {
+            return nil
+        }
+    }
+    
+    func getContentKeyAtIndex(index: Int) -> String?{
+        if let currentContents = contents {
+            return currentContents[index].key
         } else {
             return nil
         }
     }
     
     func getContentImageAtCardIndex(index: Int) -> UIImage? {
-        if let content = getContentAtCardIndex(index) {
-            return UIImage(data: content.cachedData)
+        if let currentContents = contents {
+            return UIImage(data: currentContents[index].cachedData)
         } else {
             return nil
         }
     }
     
-    func pushImageURLAtCardIndex(index: Int, fbRef: Firebase){
-        if let content = getContentAtCardIndex(index) {
-            content.getRemoteFileURLWithCompletionHandler({ (url, error) in
-                if let er = error {
-                    print(er)
-                }
-                if let u = url {
-                    fbRef.childByAutoId().setValue(String(u))
-                }
-            })
+    func downloadContentAtCardIndex(index: Int) {
+        if let currentContents = contents {
+            downloadContent(currentContents[index], pinOnCompletion: false, index: index)
         }
     }
     
+    func pushImageKeyAtCardIndex(index: Int, fbRef: Firebase){
+        if let currentContents = contents {
+            fbRef.childByAutoId().setValue(currentContents[index].key)
+        }
+    }
+    
+    func addContentByKey(key: String, shouldDownload: Bool){
+        print("adding key: \(key)")
+        if (contents?.append(manager.contentWithKey(key)) == nil){
+            contents = [manager.contentWithKey(key)]
+        }
+        if shouldDownload{
+            downloadContentAtCardIndex(contents!.count - 1)
+        }
+        
+    }
+    
     func clearCacheAtCardIndex(index: Int) {
-        let contentIndex = downloadContentsIndices[index]
-        contents?[contentIndex].removeLocal()
-//        downloadContentsIndices.removeAtIndex(index)
+        contents?[index].removeLocal()
     }
     
     //load available items from database, when all are loaded begin downloading them
@@ -79,13 +97,20 @@ class ImageStore {
                 print("Failed to load the list of contents. \(error)")
             }
             if let contents = contents where contents.count > 0 {
-                strongSelf.contents = contents
+                for c in contents{
+                    if (strongSelf.contents?.append(c) == nil) {
+                        strongSelf.contents = [c]
+                    }
+                    strongSelf.downloadContentAtCardIndex(strongSelf.contents!.count-1)
+                    
+                }
+                
                 if let nextMarker = nextMarker where !nextMarker.isEmpty{
                     strongSelf.didLoadAllContents = false
                 } else {
                     strongSelf.didLoadAllContents = true
                 }
-                strongSelf.downloadCards()
+
             }
             })
     }
@@ -102,26 +127,27 @@ class ImageStore {
     
     //download a given item, reload the cards each time a new item is downloaded
     private func downloadContent(content: AWSContent, pinOnCompletion: Bool, index: Int) {
-        content.downloadWithDownloadType( .IfNewerExists, pinOnCompletion: pinOnCompletion, progressBlock: {(content: AWSContent?, progress: NSProgress?) -> Void in
+        if !content.cached{
+            
+        content.downloadWithDownloadType( AWSContentDownloadType.IfNotCached, pinOnCompletion: pinOnCompletion, progressBlock: {(content: AWSContent?, progress: NSProgress?) -> Void in
             // Handle progress feedback
             }, completionHandler: {(content: AWSContent?, data: NSData?, error: NSError?) -> Void in
                 if let error = error {
                     print("Failed to download a content from a server.) + \(error)")
                     return
+                } else {
+                    self.delegate.newCardImageLoaded(index)
                 }
-                self.downloadContentsIndices.append(index)
-                if self.getNumAvailCards() == 1{
-                    self.delegate.reloadData()
-                }
-                
+            
         })
+        } else {
+            self.delegate.newCardImageLoaded(index)
+        }
     }
-    
     
 }
 
 //Delegate protocol so that can alter cards once downloaded
 protocol ImageStoreDelegate {
-    func reloadData()
-    func resetCurrentCardNumber()
+    func newCardImageLoaded(cardIndex: Int)
 }

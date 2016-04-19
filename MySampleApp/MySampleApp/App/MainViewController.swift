@@ -20,16 +20,28 @@ class MainViewController: UIViewController, ImageStoreDelegate {
     @IBOutlet var countLabel: UILabel!
     @IBOutlet var progressBar: KYCircularProgress!
     @IBOutlet var kolodaView: KolodaView!
+    private var downloadContentsIndices: [Int] = []
+    var manager: AWSContentManager!
     
     var imageStore: ImageStore!
     
     //TODO change this
     var adCount: Int = 0
     var contentCount: Int = 0
-    
-    var userUID: String!
-    
     var userFBRef: Firebase!
+    
+    var userUID: String!{
+        didSet{
+            let tempRef = Firebase(url: "https://enas400hype.firebaseio.com/")
+            userFBRef = tempRef.childByAppendingPath("users").childByAppendingPath(userUID)
+        }
+    }
+    
+    var keyForFriend: String!{
+        didSet{
+            self.performSegueWithIdentifier("showUsersTableViewSegue", sender: nil)
+        }
+    }
     
     //Create subview for kolodaView, add Koloda view, and pass protocols
     override func viewDidLoad() {
@@ -49,9 +61,7 @@ class MainViewController: UIViewController, ImageStoreDelegate {
     }
     
     override func viewDidAppear(animated: Bool) {
-        let tempRef = Firebase(url: "https://enas400hype.firebaseio.com/")
-        userFBRef = tempRef.childByAppendingPath("users").childByAppendingPath(userUID)
-        
+
         userFBRef.observeEventType(.Value, withBlock: { (snapshot) in
             let data = snapshot.value["contentCount"] as? Int
             if let t = data{
@@ -64,10 +74,20 @@ class MainViewController: UIViewController, ImageStoreDelegate {
     }
     
     func initImageStore(){
-        imageStore = ImageStore(delegate: self)
+        imageStore = ImageStore(delegate: self, awsManager: manager)
+        let fbRef = userFBRef.childByAppendingPath("adsFromFriends")
+        fbRef.observeEventType(.ChildAdded, withBlock: { (snapshot) in
+            let contentKey = snapshot.value as? String
+            if let key = contentKey{
+                self.imageStore.addContentByKey(key, shouldDownload: true)
+            }
+        })
+        
+        imageStore.initializeCardsFromAWS()
     }
     
     func checkAdCount(){
+        userFBRef.childByAppendingPath("adViewedCount").setValue(adCount)
         progressBar.progress = Double(adCount)/Double(Constants.ADSPERCONTENT)
         if(adCount % Constants.ADSPERCONTENT) == 0 {
             contentCount++
@@ -84,27 +104,29 @@ class MainViewController: UIViewController, ImageStoreDelegate {
         kolodaView.swipe(SwipeResultDirection.Left)
     }
     
-    func reloadData(){
-        kolodaView.reloadData()
-    }
-    func resetCurrentCardNumber(){
-        kolodaView.resetCurrentCardNumber()
+    func newCardImageLoaded(cardIndex: Int){
+        downloadContentsIndices.append(cardIndex)
+        if downloadContentsIndices.count == 1 {
+            kolodaView.reloadData()
+        }
     }
     
-
+    @IBAction func unwindFromUsersSegue(segue: UIStoryboardSegue){
+        
+    }
 
 }
 
 // KolodaView protocol that determines what cards to show
 extension MainViewController: KolodaViewDataSource{
     func koloda(kolodaNumberOfCards koloda:KolodaView) -> UInt {
-        let test = UInt(imageStore.getNumAvailCards())
-        return test
+        return UInt(downloadContentsIndices.count)
+        
     }
     
     //Return a new view (card) to show from ImageStore
     func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
-        if let image = imageStore.getContentImageAtCardIndex(Int(index)) {
+        if let image = imageStore.getContentImageAtCardIndex(downloadContentsIndices[Int(index)]) {
 //            let newView = UIImageView(image: image)
 //            let newContainerView = UIView(frame: kolodaView.frameForCardAtIndex(0))
             let superFrame = kolodaView.frameForCardAtIndex(0)
@@ -137,21 +159,40 @@ extension MainViewController: KolodaViewDataSource{
             return newView
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+        if segue.identifier == "showUsersTableViewSegue" {
+            let newVC = segue.destinationViewController as! UsersTableViewController
+            newVC.keyForFriend = keyForFriend
+            newVC.ownUID = userUID
+            
+//            newVC.height = UIScreen.mainScreen().bounds.height -
+//                self.view.bounds.height
+//            newVC.view.superview?.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, height)
+        }
+    }
         
 }
 
 // Own implemenation upon swiping so can clear image cache of given card
 extension MainViewController: KolodaViewDelegate {
     func koloda(koloda: KolodaView, didSwipedCardAtIndex index: UInt, inDirection direction: SwipeResultDirection) {
-        imageStore.clearCacheAtCardIndex(Int(index))
+        
         adCount++
         checkAdCount()
+        imageStore.clearCacheAtCardIndex(downloadContentsIndices[Int(index)])
         
         if direction == .Right {
             let newFBRef = userFBRef.childByAppendingPath("cardsLiked")
-            imageStore.pushImageURLAtCardIndex(Int(index), fbRef: newFBRef)
+            imageStore.pushImageKeyAtCardIndex(downloadContentsIndices[Int(index)], fbRef: newFBRef)
 //            imageStore.pushImageURLAtCardIndex(Int(index), fbRef: userFBRef)
+        } else if direction == SwipeResultDirection.Up{
+            if let key = imageStore.getContentKeyAtIndex(Int(index)){
+                keyForFriend = key
+            }
         }
+        
     }
     func koloda(kolodaDidRunOutOfCards koloda: KolodaView) {
         //Example: reloading

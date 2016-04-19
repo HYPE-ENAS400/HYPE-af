@@ -13,6 +13,7 @@
 
 import UIKit
 import Batch
+import AWSMobileHubHelper
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Batch.startWithAPIKey("DEV570BD07814AB0002DE2261E8E60")
         BatchPush.registerForRemoteNotifications()
         
+        let manager = AWSContentManager.defaultContentManager()
+        
         let navViewController = window!.rootViewController as! HypeNavViewController
         
         var storyboard = UIStoryboard(name: "Settings View", bundle:nil)
@@ -33,9 +36,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         storyboard = UIStoryboard(name: "Main Hype View", bundle:nil)
         let mainViewController = storyboard.instantiateViewControllerWithIdentifier("mainHypeView") as! MainViewController
+        mainViewController.manager = manager
         
         navViewController.mainViewController = mainViewController
         
+        storyboard = UIStoryboard(name: "Grid View", bundle:nil)
+        let gridViewController = storyboard.instantiateViewControllerWithIdentifier("gridViewController") as! GridViewController
+        gridViewController.manager = manager
+        
+        navViewController.gridViewController = gridViewController
         
         let keychainWrapper = KeychainWrapper.standardKeychainAccess()
         
