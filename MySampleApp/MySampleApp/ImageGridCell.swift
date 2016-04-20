@@ -11,14 +11,16 @@ import UIKit
 class ImageGridCell: UICollectionViewCell{
     
     @IBOutlet var view: UIView!
+    @IBOutlet var spinner: UIActivityIndicatorView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        updateWithImage(nil)
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        updateWithImage(nil)
     }
     
     func setRandomView(){
@@ -30,9 +32,13 @@ class ImageGridCell: UICollectionViewCell{
 //        self.addSubview(newView)
     }
     
+    func highlightCell(){
+        view.backgroundColor = UIColor(red: 255/255, green: 56/255, blue: 73/255, alpha: 1.0)
+    }
+    
     func updateWithImage(image: UIImage?) {
         if let imageToDisplay = image {
-//            spinner.stopAnimating()
+            spinner.stopAnimating()
 
 //            let superFrame = self.frame
 //            let newContainerView = UIView(frame: superFrame)
@@ -56,7 +62,7 @@ class ImageGridCell: UICollectionViewCell{
             
         }
         else {
-//            spinner.startAnimating()
+            spinner.startAnimating()
             
         }
     }

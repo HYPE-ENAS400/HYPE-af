@@ -20,7 +20,7 @@
          contextName = "HypeNavViewController.userName.didset:HypeNavViewController.swift">
       </ContextState>
       <ContextState
-         contextName = "DataSource.((downloadContent in _38E4AED2CBBA7409B935985DE578BF39)(DataSource) -&gt; (AWSContent, pinOnCompletion : Bool, index : Int) -&gt; ()).(closure #2):DataSource.swift">
+         contextName = "ImageStore.(downloadCards in _BF90D9CE06DC1620B8690291FF7B7A02)() -&gt; ():ImageStore.swift">
       </ContextState>
       <ContextState
          contextName = "ImageStore.deleteContentAtcardIndex(Int) -&gt; ():ImageStore.swift">
@@ -29,7 +29,7 @@
          contextName = "ImageStore.((downloadContent in _BF90D9CE06DC1620B8690291FF7B7A02)(ImageStore) -&gt; (AWSContent, pinOnCompletion : Bool, index : Int) -&gt; ()).(closure #2):ImageStore.swift">
       </ContextState>
       <ContextState
-         contextName = "ImageStore.(downloadCards in _BF90D9CE06DC1620B8690291FF7B7A02)() -&gt; ():ImageStore.swift">
+         contextName = "DataSource.((downloadContent in _38E4AED2CBBA7409B935985DE578BF39)(DataSource) -&gt; (AWSContent, pinOnCompletion : Bool, index : Int) -&gt; ()).(closure #2):DataSource.swift">
       </ContextState>
       <ContextState
          contextName = "specialized GridViewController.collectionView(UICollectionView, cellForItemAtIndexPath : NSIndexPath) -&gt; UICollectionViewCell:GridViewController.swift">
@@ -50,6 +50,14 @@
          contextName = "DataSource.koloda(kolodaNumberOfCards : KolodaView) -&gt; UInt:DataSource.swift">
       </ContextState>
       <ContextState
+         contextName = "ImageStore.((loadMoreContents in _BF90D9CE06DC1620B8690291FF7B7A02)(ImageStore) -&gt; () -&gt; ()).(closure #1):ImageStore.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "contents[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "DraggableCardView.panGestureRecognized(UIPanGestureRecognizer) -&gt; ():DraggableCardView.swift">
          <PersistentStrings>
             <PersistentString
@@ -58,12 +66,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ImageStore.((loadMoreContents in _BF90D9CE06DC1620B8690291FF7B7A02)(ImageStore) -&gt; () -&gt; ()).(closure #1):ImageStore.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "contents[0]">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "HypeAd.(downloadContent(HypeAd) -&gt; ((result : DownloadResult) -&gt; ()) -&gt; ()).(closure #2):HypeAd.swift">
       </ContextState>
       <ContextState
          contextName = "DataSource.(setNumberOfCards in _38E4AED2CBBA7409B935985DE578BF39)() -&gt; ():DataSource.swift">

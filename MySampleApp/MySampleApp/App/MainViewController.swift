@@ -14,16 +14,19 @@
 import UIKit
 import AWSMobileHubHelper
 import Firebase
+import SafariServices
 
-class MainViewController: UIViewController, ImageStoreDelegate {
+class MainViewController: UIViewController, HypeAdStoreDelegate {
     
     @IBOutlet var countLabel: UILabel!
     @IBOutlet var progressBar: KYCircularProgress!
     @IBOutlet var kolodaView: KolodaView!
+    @IBOutlet var mainSpinner: UIActivityIndicatorView!
+    
     private var downloadContentsIndices: [Int] = []
     var manager: AWSContentManager!
     
-    var imageStore: ImageStore!
+    var adStore: HypeAdStore!
     
     //TODO change this
     var adCount: Int = 0
@@ -47,6 +50,8 @@ class MainViewController: UIViewController, ImageStoreDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mainSpinner.startAnimating()
+        
         progressBar.lineWidth = 10.0
         progressBar.guideLineWidth = 10.0
         progressBar.progressGuideColor = UIColor(red: 212/255, green: 212/255, blue: 212/255, alpha: 1)
@@ -62,11 +67,17 @@ class MainViewController: UIViewController, ImageStoreDelegate {
     
     override func viewDidAppear(animated: Bool) {
 
-        userFBRef.observeEventType(.Value, withBlock: { (snapshot) in
+        userFBRef.observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             let data = snapshot.value["contentCount"] as? Int
             if let t = data{
                 self.contentCount = t
                 self.countLabel.text = "\(self.contentCount)"
+            }
+            let adsViewed = snapshot.value["adViewedCount"] as? Int
+            if let t = adsViewed{
+                self.adCount = t
+                let progress = t % Constants.ADSPERCONTENT
+                self.progressBar.progress = Double(progress + 1)/Double(Constants.ADSPERCONTENT)
             }
             //add error handler?
             
@@ -74,26 +85,26 @@ class MainViewController: UIViewController, ImageStoreDelegate {
     }
     
     func initImageStore(){
-        imageStore = ImageStore(delegate: self, awsManager: manager)
+        adStore = HypeAdStore(delegate: self, awsManager: manager)
         let fbRef = userFBRef.childByAppendingPath("adsFromFriends")
         fbRef.observeEventType(.ChildAdded, withBlock: { (snapshot) in
             let contentKey = snapshot.value as? String
             if let key = contentKey{
-                self.imageStore.addContentByKey(key, shouldDownload: true)
+                self.adStore.addContentByKey(key, shouldDownload: true)
             }
         })
         
-        imageStore.initializeCardsFromAWS()
+        adStore.initializeCardsFromAWS()
     }
     
     func checkAdCount(){
         userFBRef.childByAppendingPath("adViewedCount").setValue(adCount)
-        progressBar.progress = Double(adCount)/Double(Constants.ADSPERCONTENT)
-        if(adCount % Constants.ADSPERCONTENT) == 0 {
+        let progress = adCount % Constants.ADSPERCONTENT
+        progressBar.progress = Double(progress + 1)/Double(Constants.ADSPERCONTENT)
+        if(progress) == 0 {
             contentCount++
+            self.countLabel.text = "\(self.contentCount)"
             userFBRef.childByAppendingPath("contentCount").setValue(contentCount)
-            adCount = 0
-            
         }
     }
     
@@ -108,6 +119,7 @@ class MainViewController: UIViewController, ImageStoreDelegate {
         downloadContentsIndices.append(cardIndex)
         if downloadContentsIndices.count == 1 {
             kolodaView.reloadData()
+            mainSpinner.stopAnimating()
         }
     }
     
@@ -126,14 +138,19 @@ extension MainViewController: KolodaViewDataSource{
     
     //Return a new view (card) to show from ImageStore
     func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
-        if let image = imageStore.getContentImageAtCardIndex(downloadContentsIndices[Int(index)]) {
+        let cardIndex = downloadContentsIndices[Int(index)]
+        if let image = adStore.getContentImageAtCardIndex(cardIndex) {
 //            let newView = UIImageView(image: image)
 //            let newContainerView = UIView(frame: kolodaView.frameForCardAtIndex(0))
             let superFrame = kolodaView.frameForCardAtIndex(0)
             let newContainerView = UIView(frame: superFrame)
             newContainerView.layer.cornerRadius = 20
             
-            newContainerView.backgroundColor = UIColor.whiteColor()
+            if adStore.getIsFromFriendAtCardIndex(cardIndex){
+                newContainerView.backgroundColor = UIColor(red: 255/255, green: 56/255, blue: 73/255, alpha: 1.0)
+            } else {
+                newContainerView.backgroundColor = UIColor.whiteColor()
+            }
             newContainerView.layer.shadowOpacity = 0.7
             newContainerView.layer.shadowOffset = CGSizeZero
             newContainerView.layer.shadowRadius = 10
@@ -167,9 +184,6 @@ extension MainViewController: KolodaViewDataSource{
             newVC.keyForFriend = keyForFriend
             newVC.ownUID = userUID
             
-//            newVC.height = UIScreen.mainScreen().bounds.height -
-//                self.view.bounds.height
-//            newVC.view.superview?.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, height)
         }
     }
         
@@ -179,21 +193,49 @@ extension MainViewController: KolodaViewDataSource{
 extension MainViewController: KolodaViewDelegate {
     func koloda(koloda: KolodaView, didSwipedCardAtIndex index: UInt, inDirection direction: SwipeResultDirection) {
         
+
+//        
+//        if index % 3 == 0 && index > 0{
+//            adStore.downloadMoreCards(3)
+//        }
+        
         adCount++
         checkAdCount()
-        imageStore.clearCacheAtCardIndex(downloadContentsIndices[Int(index)])
+        adStore.clearCacheAtCardIndex(downloadContentsIndices[Int(index)])
         
         if direction == .Right {
             let newFBRef = userFBRef.childByAppendingPath("cardsLiked")
-            imageStore.pushImageKeyAtCardIndex(downloadContentsIndices[Int(index)], fbRef: newFBRef)
-//            imageStore.pushImageURLAtCardIndex(Int(index), fbRef: userFBRef)
+            adStore.pushImageKeyAtCardIndex(downloadContentsIndices[Int(index)], fbRef: newFBRef)
         } else if direction == SwipeResultDirection.Up{
-            if let key = imageStore.getContentKeyAtIndex(Int(index)){
+            if let key = adStore.getContentKeyAtIndex(downloadContentsIndices[Int(index)]){
                 keyForFriend = key
             }
         }
         
+        print("Swiped: \(index) of \(adStore.getNumAvailCards()) cards")
+        if Int(index + 1) == adStore.getNumAvailCards() {
+            mainSpinner.startAnimating()
+            adStore.resetCardsToReload()
+            downloadContentsIndices.removeAll()
+            adStore.downloadMoreCards(adStore.getNumAvailCards())
+            kolodaView.resetCurrentCardNumber()
+            
+        }
+        
     }
+    
+    func koloda(koloda: KolodaView, didSelectCardAtIndex index: UInt) {
+        if let url = NSURL(string: "http://www.githyped.com/"){
+            if #available(iOS 9.0, *) {
+                let vc = SFSafariViewController(URL: url, entersReaderIfAvailable: false)
+                 presentViewController(vc, animated: true, completion: nil)
+            } else {
+                // Fallback on earlier versions
+            }
+           
+        }
+    }
+    
     func koloda(kolodaDidRunOutOfCards koloda: KolodaView) {
         //Example: reloading
         kolodaView.reloadData()

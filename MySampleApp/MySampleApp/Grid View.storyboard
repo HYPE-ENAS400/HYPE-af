@@ -28,9 +28,26 @@
                                     <rect key="frame" x="0.0" y="0.0" width="108" height="108"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="dp5-iS-Eef">
+                                            <rect key="frame" x="29" y="29" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="SIS-v0-Wkt"/>
+                                                <constraint firstAttribute="height" constant="50" id="l4K-qz-bEy"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.zPosition">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </activityIndicatorView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a78-8k-pvd">
                                             <rect key="frame" x="8" y="8" width="92" height="92"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.zPosition">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -39,10 +56,13 @@
                                 <constraints>
                                     <constraint firstAttribute="bottomMargin" secondItem="a78-8k-pvd" secondAttribute="bottom" id="4kw-Xl-nwF"/>
                                     <constraint firstItem="a78-8k-pvd" firstAttribute="top" secondItem="SPF-2i-XgV" secondAttribute="topMargin" id="Rgp-0L-LFX"/>
+                                    <constraint firstItem="dp5-iS-Eef" firstAttribute="centerY" secondItem="SPF-2i-XgV" secondAttribute="centerY" id="bwY-PI-CV6"/>
                                     <constraint firstItem="a78-8k-pvd" firstAttribute="leading" secondItem="SPF-2i-XgV" secondAttribute="leadingMargin" id="j66-Dg-nAY"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="a78-8k-pvd" secondAttribute="trailing" id="mEm-fr-Pe7"/>
+                                    <constraint firstItem="dp5-iS-Eef" firstAttribute="centerX" secondItem="SPF-2i-XgV" secondAttribute="centerX" id="uPY-4u-LJY"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="spinner" destination="dp5-iS-Eef" id="bPZ-Rc-ZvV"/>
                                     <outlet property="view" destination="a78-8k-pvd" id="yft-vD-wpq"/>
                                 </connections>
                             </collectionViewCell>

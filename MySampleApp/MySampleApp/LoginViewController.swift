@@ -139,10 +139,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
 //        }
         if segue.identifier == "unwindFromLogInSegue" {
             let navViewController = segue.destinationViewController as! HypeNavViewController
-            navViewController.isLoggedIn = true
             navViewController.userUID = userUID
             navViewController.userName = userName
             navViewController.password = password
+            navViewController.isLoggedIn = true
+
         }
     }
 //

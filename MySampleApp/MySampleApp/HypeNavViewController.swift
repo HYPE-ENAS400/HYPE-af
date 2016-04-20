@@ -8,6 +8,15 @@
 
 import UIKit
 
+//enum VCTransition {
+//    case SettingsToMain
+//    case SettingsToGrid
+//    case MainToSettings
+//    case MainToGrid
+//    case GridToMain
+//    case GridToSettings
+//}
+
 class HypeNavViewController: UIViewController, SettingsViewControllerDelegate {
     @IBOutlet var gridButton: UIButton!
     @IBOutlet var hypeButton: UIButton!
@@ -22,6 +31,7 @@ class HypeNavViewController: UIViewController, SettingsViewControllerDelegate {
         didSet{
             mainViewController?.userUID = userUID
             gridViewController?.userUID = userUID
+            settingsViewController?.uid = userUID
         }
     }
     
@@ -50,6 +60,8 @@ class HypeNavViewController: UIViewController, SettingsViewControllerDelegate {
             
         }
     }
+    
+//    private var vcTransition: VCTransition!
     
     private var activeViewController: UIViewController?{
         didSet{
@@ -84,18 +96,33 @@ class HypeNavViewController: UIViewController, SettingsViewControllerDelegate {
     }
     
     @IBAction func onSettingButtonClicked(sender: AnyObject){
+//        if(activeViewController == gridViewController){
+//            vcTransition = VCTransition.GridToSettings
+//        } else if (activeViewController == mainViewController){
+//            vcTransition = VCTransition.MainToSettings
+//        }
         activeViewController = settingsViewController
         settingsButton.alpha = 1
         hypeButton.alpha = 0.7
         gridButton.alpha = 0.7
     }
     @IBAction func onHypeButtonClicked(sender: AnyObject){
+//        if(activeViewController == gridViewController){
+//            vcTransition = VCTransition.GridToMain
+//        } else if (activeViewController == settingsViewController){
+//            vcTransition = VCTransition.SettingsToMain
+//        }
         activeViewController = mainViewController
         settingsButton.alpha = 0.7
         hypeButton.alpha = 1
         gridButton.alpha = 0.7
     }
     @IBAction func onGridButtonClicked(sender: AnyObject){
+//        if(activeViewController == mainViewController){
+//            vcTransition = VCTransition.MainToGrid
+//        } else if (activeViewController == settingsViewController){
+//            vcTransition = VCTransition.SettingsToGrid
+//        }
         activeViewController = gridViewController
         settingsButton.alpha = 0.7
         hypeButton.alpha = 0.7

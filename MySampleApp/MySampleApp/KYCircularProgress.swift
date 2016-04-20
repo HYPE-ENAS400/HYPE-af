@@ -269,6 +269,10 @@ class KYCircularShapeView: UIView {
         
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.duration = 0.5
+        if prevProgress == 1 {
+            prevProgress = 0
+        }
+
         animation.fromValue = prevProgress
         animation.toValue = progress
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
@@ -276,6 +280,7 @@ class KYCircularShapeView: UIView {
         shapeLayer.addAnimation(animation, forKey: "animateCircle)")
     
         prevProgress = progress
+
 //        CATransaction.begin()
 //        CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
 //        shapeLayer.strokeEnd = CGFloat(progress)

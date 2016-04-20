@@ -10,4 +10,5 @@ struct Constants {
     static let USERKEY = "HYPELOGINEMAIL"
     static let PASSKEY = "HYPELOGINPASSWORD"
     static let ADSPERCONTENT = 4
+    static let INVADSPERCONTENT = 0.25
 }

@@ -18,26 +18,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="xOy-4y-Jgh">
-                                <rect key="frame" x="185" y="185" width="230" height="230"/>
+                                <rect key="frame" x="185" y="80" width="230" height="230"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="230" id="aJA-ev-Qnq"/>
-                                    <constraint firstAttribute="height" constant="230" id="xV3-cp-eFA"/>
+                                    <constraint firstAttribute="width" constant="230" id="SqV-Gc-Vce"/>
+                                    <constraint firstAttribute="height" constant="230" id="Z1G-yF-SLA"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hype-2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tB7-1s-UUU">
-                                <rect key="frame" x="254" y="423" width="92" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <color key="textColor" red="0.96078431372549022" green="0.52156862745098043" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HYPE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tB7-1s-UUU">
+                                <rect key="frame" x="189" y="310" width="223" height="103"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="86"/>
+                                <color key="textColor" red="1" green="0.2196078431372549" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tB7-1s-UUU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="PaC-pp-lfq"/>
-                            <constraint firstItem="tB7-1s-UUU" firstAttribute="top" secondItem="xOy-4y-Jgh" secondAttribute="bottom" constant="8" symbolic="YES" id="Tce-R8-ODG"/>
-                            <constraint firstItem="tB7-1s-UUU" firstAttribute="centerX" secondItem="xOy-4y-Jgh" secondAttribute="centerX" id="dfs-vQ-t15"/>
-                            <constraint firstItem="xOy-4y-Jgh" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="lcW-sb-PuS"/>
-                            <constraint firstItem="xOy-4y-Jgh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="pGd-0U-ZGj"/>
+                            <constraint firstItem="tB7-1s-UUU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9Cr-7J-RHw"/>
+                            <constraint firstItem="xOy-4y-Jgh" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="60" id="Obr-zC-UdH"/>
+                            <constraint firstItem="tB7-1s-UUU" firstAttribute="top" secondItem="xOy-4y-Jgh" secondAttribute="bottom" id="Ra4-Of-Zk6"/>
+                            <constraint firstItem="xOy-4y-Jgh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="TCx-2d-flB"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -47,6 +46,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="iTunesArtwork" width="512" height="512"/>
+        <image name="iTunesArtwork" width="2133" height="2133"/>
     </resources>
 </document>

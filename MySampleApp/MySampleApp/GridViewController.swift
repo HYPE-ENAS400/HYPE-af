@@ -8,10 +8,11 @@
 
 import UIKit
 import AWSMobileHubHelper
+import SafariServices
 
-class GridViewController: UICollectionViewController, ImageStoreDelegate{
+class GridViewController: UICollectionViewController, HypeAdStoreDelegate{
     
-    var imageStore: ImageStore!
+    var adStore: HypeAdStore!
     var firebaseRef: Firebase!
     var userUID: String!{
         didSet{
@@ -23,12 +24,12 @@ class GridViewController: UICollectionViewController, ImageStoreDelegate{
     
     func initImageStore(){
         
-        imageStore = ImageStore(delegate: self, awsManager: manager)
+        adStore = HypeAdStore(delegate: self, awsManager: manager)
         
         firebaseRef.observeEventType(.ChildAdded, withBlock: { (snapshot) in
             let contentKey = snapshot.value as? String
             if let key = contentKey{
-                self.imageStore.addContentByKey(key, shouldDownload: false)
+                self.adStore.addContentByKey(key, shouldDownload: false)
 //                self.collectionView?.reloadData()
             }
         })
@@ -41,11 +42,26 @@ class GridViewController: UICollectionViewController, ImageStoreDelegate{
     
     override func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath){
         print("indexpath.row: \(indexPath.row)")
-        imageStore.downloadContentAtCardIndex(indexPath.row)
+        adStore.downloadContentAtCardIndex(indexPath.row)
+    }
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+//        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! ImageGridCell
+//        cell.highlightCell()
+        
+        if let url = NSURL(string: "http://www.githyped.com/"){
+            if #available(iOS 9.0, *) {
+                let vc = SFSafariViewController(URL: url, entersReaderIfAvailable: false)
+                presentViewController(vc, animated: true, completion: nil)
+            } else {
+                // Fallback on earlier versions
+            }
+            
+        }
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageStore.getNumAvailCards()
+        return adStore.getNumAvailCards()
 //        return 10
     }
     
@@ -53,7 +69,7 @@ class GridViewController: UICollectionViewController, ImageStoreDelegate{
         let identifier = "UICollectionViewCell"
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: indexPath) as! ImageGridCell
         
-        let image = imageStore.getContentImageAtCardIndex(indexPath.row)
+        let image = adStore.getContentImageAtCardIndex(indexPath.row)
         cell.updateWithImage(image)
         
         return cell
@@ -62,13 +78,11 @@ class GridViewController: UICollectionViewController, ImageStoreDelegate{
     func newCardImageLoaded(cardIndex: Int) {
 //        self.collectionView?.reloadData()
         let photoIndexPath = NSIndexPath(forRow: cardIndex, inSection:0)
-        print(photoIndexPath)
-        let collectionView = self.collectionView
-        print(collectionView)
-        let cell = collectionView?.cellForItemAtIndexPath(photoIndexPath)
-        print(cell)
+        print("new Card Image Loaded \(cardIndex)")
+//        let collectionView = self.collectionView
+//        let cell = collectionView?.cellForItemAtIndexPath(photoIndexPath)
         if let cell = self.collectionView?.cellForItemAtIndexPath(photoIndexPath) as? ImageGridCell {
-            let image = imageStore.getContentImageAtCardIndex(cardIndex)
+            let image = adStore.getContentImageAtCardIndex(cardIndex)
             cell.updateWithImage(image)
         }
     }

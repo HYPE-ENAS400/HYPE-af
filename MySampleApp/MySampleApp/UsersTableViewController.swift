@@ -38,6 +38,7 @@ class UsersTableViewController: UIViewController, UITableViewDataSource, UITable
                 if let name = snapshot.value["username"] as? String {
                     self.userDictionary[name] = snapshot.key
                     self.userNames.append(name)
+                    self.tableView.reloadData()
             }
             }
         })

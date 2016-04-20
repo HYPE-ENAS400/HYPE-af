@@ -238,7 +238,7 @@ public class DraggableCardView: UIView {
     //MARK: Private
     private var dragDirection: SwipeResultDirection {
         //TODO CHANGE DEFINITION OF UPSWIPE
-        if dragDistance.y < -100 && abs(dragDistance.x) < 50{
+        if dragDistance.y < -80 && abs(dragDistance.x) < 50{
             return .Up
         }
         return dragDistance.x > 0 ? .Right : .Left
